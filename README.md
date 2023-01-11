@@ -90,7 +90,7 @@
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for helping me in my journey to become a fullstack software developer 🌹
+I would like to thank Microverse for helping me in my journey to become a Fullstack developer 🌹
 
 <p align="right"><a href="#readme-top">👆</a></p>
 

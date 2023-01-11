@@ -23,6 +23,15 @@ header {
   line-height: 3rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+#logo {
+  color: var(--dark);
+}
+
 #welcome {
   display: flex;
   flex-direction: column;
@@ -60,6 +69,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
+  padding: 0;
 }
 
 .social-icon {

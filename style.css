@@ -43,17 +43,17 @@ a {
   min-height: 90vh;
 }
 
-#welcome-heading {
+.heading {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
 }
 
-#heading-secondary {
+.text-secondary {
   color: var(--secondary);
 }
 
-#heading-primary {
+.text-primary {
   color: var(--primary);
 }
 

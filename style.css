@@ -1,6 +1,9 @@
 :root {
   --primary: #36b37e;
+  --active: #008552;
+  --natural: #3a4a42;
   --secondary: #172b4d;
+  --navy: #344563;
   --white: #fff;
   --light: #c5e9da;
   --smoke: #ebf0ee;
@@ -37,7 +40,7 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url("./assets/background/illsutration-mobile.svg");
+  background-image: url("./assets/background/welcome.svg");
   background-size: contain;
   background-repeat: no-repeat;
   min-height: 90vh;
@@ -57,7 +60,7 @@ a {
   color: var(--primary);
 }
 
-#description {
+.description {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 2rem;
@@ -93,4 +96,148 @@ a {
   height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--gray);
+}
+
+#recent-works {
+  display: grid;
+  grid-template-rows: auto repeat(6, 1fr);
+  justify-items: center;
+  row-gap: 1.5rem;
+}
+
+#group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#indicator {
+  height: 0.25rem;
+  width: 3rem;
+  background-color: var(--primary);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid var(--smoke);
+  width: 20.5rem;
+}
+
+.image-placeholder {
+  height: 15.75rem;
+  width: 100%;
+  background-color: var(--smoke);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--natural);
+  text-align: center;
+}
+
+.languages {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.language-tags {
+  list-style-type: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  background-color: var(--smoke);
+}
+
+.button {
+  font-weight: 500;
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  border: none;
+  margin: 1rem 0;
+}
+
+.button:active {
+  background-color: var(--active);
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#about-me-intro {
+  background-image: url("./assets/background/about-me.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.about-me-card {
+  display: grid;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 2fr 1fr 1fr;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--smoke);
+  width: 20.5rem;
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--white);
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.skill-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-tag {
+  list-style-type: none;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  margin: 0.25rem;
 }

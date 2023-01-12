@@ -1,0 +1,96 @@
+:root {
+  --primary: #36b37e;
+  --secondary: #172b4d;
+  --white: #fff;
+  --light: #c5e9da;
+  --smoke: #ebf0ee;
+  --dark: #28352f;
+  --gray: #505f79;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: var(--dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+#logo {
+  color: var(--dark);
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("./assets/background/illsutration-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+#welcome-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#heading-secondary {
+  color: var(--secondary);
+}
+
+#heading-primary {
+  color: var(--primary);
+}
+
+#description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--secondary);
+}
+
+#social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icon {
+  margin: 0.5rem;
+  color: var(--gray);
+  font-size: 1.5rem;
+}
+
+#scroll-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--gray);
+}

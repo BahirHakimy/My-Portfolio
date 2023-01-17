@@ -16,6 +16,8 @@
 
 body {
   font-family: "Inter", sans-serif;
+  width: 375px;
+  margin: auto;
 }
 
 header {
@@ -145,7 +147,11 @@ a {
 }
 
 .languages {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -155,8 +161,7 @@ a {
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
   background-color: var(--smoke);
-  width: max-content;
-  float: left;
+  border-radius: 4px;
 }
 
 .button {
@@ -167,10 +172,7 @@ a {
   background-color: var(--primary);
   border: none;
   margin: 1rem 0;
-}
-
-.button:active {
-  background-color: var(--active);
+  letter-spacing: 0.03rem;
 }
 
 #about-me {
@@ -248,7 +250,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .contact-input {
@@ -257,6 +259,7 @@ a {
   background-color: var(--white);
   padding: 0.5rem;
   border: 1px solid #d0d9d4;
+  width: 227px;
 }
 
 #message {
@@ -265,4 +268,19 @@ a {
   border: 1px solid var(--light-green);
   border-radius: 0.25rem;
   padding: 0.75rem;
+}
+
+.button:hover {
+  background: #36B37F;
+}
+
+.button:active {
+  background: #008552;
+}
+
+.footer {
+ padding-bottom: 250px;
+}
+#submit-button {
+  margin: 0;
 }

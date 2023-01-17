@@ -1,5 +1,6 @@
 :root {
   --primary: #36b37e;
+  --light-green: #60c095;
   --active: #008552;
   --natural: #3a4a42;
   --secondary: #172b4d;
@@ -9,6 +10,8 @@
   --smoke: #ebf0ee;
   --dark: #28352f;
   --gray: #505f79;
+  --light-gray: #6b778c;
+  --dark-blue: #091e42;
 }
 
 body {
@@ -68,7 +71,7 @@ a {
   color: var(--secondary);
 }
 
-#social-icons {
+.social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,4 +241,28 @@ a {
   background-color: var(--white);
   border-radius: 0.75rem;
   margin: 0.25rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-input {
+  border-radius: 0.25rem;
+  color: var(--light-gray);
+  background-color: var(--white);
+  padding: 0.5rem;
+  border: 1px solid #d0d9d4;
+}
+
+#message {
+  font-family: inherit;
+  color: var(--dark-blue);
+  border: 1px solid var(--light-green);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
 }

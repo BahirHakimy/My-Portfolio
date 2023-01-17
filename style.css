@@ -55,6 +55,7 @@ a {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
+  margin: 0.75rem;
 }
 
 .text-secondary {
@@ -71,6 +72,7 @@ a {
   line-height: 2rem;
   text-align: center;
   color: var(--secondary);
+  padding: 0 1rem;
 }
 
 .social-icons {
@@ -175,6 +177,10 @@ a {
   letter-spacing: 0.03rem;
 }
 
+.button:active {
+  background: var(--active);
+}
+
 #about-me {
   display: flex;
   flex-direction: column;
@@ -185,6 +191,7 @@ a {
 
 #about-me-intro {
   background-image: url("./assets/background/about-me.svg");
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -258,7 +265,7 @@ a {
   color: var(--light-gray);
   background-color: var(--white);
   padding: 0.5rem;
-  border: 1px solid #d0d9d4;
+  border: 1px solid var(--smoke);
   width: 227px;
 }
 
@@ -270,17 +277,22 @@ a {
   padding: 0.75rem;
 }
 
-.button:hover {
-  background: #36B37F;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(./assets/background/contact-form.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: top;
 }
 
-.button:active {
-  background: #008552;
+.footer-email {
+  padding-bottom: 250px;
 }
 
-.footer {
- padding-bottom: 250px;
-}
 #submit-button {
   margin: 0;
 }

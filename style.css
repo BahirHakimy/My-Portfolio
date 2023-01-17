@@ -264,9 +264,9 @@ a {
   border-radius: 0.25rem;
   color: var(--light-gray);
   background-color: var(--white);
-  padding: 0.5rem;
+  padding: 1rem;
   border: 1px solid var(--smoke);
-  width: 227px;
+  width: 20.5rem;
 }
 
 #message {
@@ -275,6 +275,11 @@ a {
   border: 1px solid var(--light-green);
   border-radius: 0.25rem;
   padding: 0.75rem;
+  width: 20.5rem;
+}
+
+#message::placeholder {
+  color: var(--dark-blue);
 }
 
 footer {
@@ -285,8 +290,7 @@ footer {
   width: 100%;
   background-image: url(./assets/background/contact-form.svg);
   background-repeat: no-repeat;
-  background-position: right;
-  background-position-y: top;
+  background-position: right top;
 }
 
 .footer-email {

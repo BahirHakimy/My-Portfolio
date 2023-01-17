@@ -204,7 +204,11 @@
         I'm always interested in hearing about new projects, so if you'd like to
         chat please get in touch.
       </h3>
-      <form action="#" id="contact-form">
+      <form
+        action="https://formspree.io/f/mrgvbkea"
+        method="post"
+        id="contact-form"
+      >
         <input
           type="text"
           max="30"
@@ -214,6 +218,7 @@
           placeholder="Full Name"
         />
         <input
+          id="email"
           type="email"
           class="contact-input"
           required
@@ -221,15 +226,14 @@
           placeholder="Email address"
         />
         <textarea
+          placeholder="Enter text here"
           name="message"
           maxlength="500"
           required
           id="message"
           cols="30"
           rows="5"
-        >
-Enter text here</textarea
-        >
+        ></textarea>
         <button id="submit-button" class="button" type="submit">
           Get in touch
         </button>

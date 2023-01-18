@@ -14,6 +14,12 @@
   --dark-blue: #091e42;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Inter", sans-serif;
   width: 375px;
@@ -42,9 +48,9 @@ a {
 
 #welcome {
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   background-image: url("./assets/background/welcome.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -76,9 +82,6 @@ a {
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   list-style-type: none;
   padding: 0;
 }
@@ -95,9 +98,6 @@ a {
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: var(--gray);
   width: 2rem;
   height: 2rem;
@@ -114,8 +114,8 @@ a {
 
 #group {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 #indicator {
@@ -125,10 +125,7 @@ a {
 }
 
 .project-card {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 0.5rem;
   overflow: hidden;
   border: 2px solid var(--smoke);
@@ -152,8 +149,8 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
   flex-wrap: wrap;
+  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -183,27 +180,23 @@ a {
 
 #about-me {
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   margin: 2rem 0;
 }
 
 #about-me-intro {
+  flex-direction: column;
   background-image: url("./assets/background/about-me.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0.5rem;
 }
 
 .about-me-card {
   display: grid;
-  flex-direction: column;
   justify-items: center;
   align-items: center;
   grid-template-rows: 2fr 1fr 1fr;
@@ -216,9 +209,6 @@ a {
 }
 
 .icon-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   height: 5rem;
   width: 5rem;
@@ -232,11 +222,8 @@ a {
 }
 
 .skill-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   flex-wrap: wrap;
+  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -253,10 +240,7 @@ a {
 }
 
 #contact-form {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
@@ -283,10 +267,7 @@ a {
 }
 
 footer {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   background-image: url(./assets/background/contact-form.svg);
   background-repeat: no-repeat;

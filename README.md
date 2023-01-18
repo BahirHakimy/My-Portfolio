@@ -74,14 +74,18 @@
 - Twitter: [:heart:](https://twitter.com/bahirhakimy)
 - LinkedIn: [:heart:](https://linkedin.com/in/bahirhakimy)
 
+👤 **Muhammad Davlatov**
+
+- GitHub: [Muhammad0602](https://github.com/Muhammad0602)
+- Twitter: [Muhammad Davlatov](https://twitter.com/MuhammadDavla20)
+- LinkedIn: [Muhammad Davlatov](https://www.linkedin.com/in/muhammad-davlatov-6a8536254/)
+
 <p align="right"><a href="#readme-top">👆</a></p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Projects section**
-- **Contact Me Section**
 - **Desktop Version**
 
 <p align="right"><a href="#readme-top">👆</a></p>

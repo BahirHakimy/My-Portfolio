@@ -22,7 +22,6 @@
 
 body {
   font-family: "Inter", sans-serif;
-  width: 375px;
   margin: auto;
 }
 
@@ -35,6 +34,19 @@ header {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 3rem;
+}
+
+#desktop-nav {
+  display: none;
+}
+
+#desktop-nav > a {
+  color: var(--navy);
+  font: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin: auto 1rem;
 }
 
 a {
@@ -51,7 +63,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-image: url("./assets/background/welcome.svg");
+  background-image: url("./assets/background/header.svg");
   background-size: contain;
   background-repeat: no-repeat;
   min-height: 90vh;
@@ -79,6 +91,7 @@ a {
   text-align: center;
   color: var(--secondary);
   padding: 0 1rem;
+  max-width: 85%;
 }
 
 .social-icons {
@@ -102,7 +115,7 @@ a {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--smoke);
 }
 
 #recent-works {
@@ -193,6 +206,7 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   padding: 0.5rem;
+  height: 50vh;
 }
 
 .about-me-card {
@@ -280,4 +294,67 @@ footer {
 
 #submit-button {
   margin: 0;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #welcome {
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+  }
+  #about-me-intro {
+    height: 70vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    justify-content: center;
+  }
+  #logo,
+  #humberger {
+    display: none;
+  }
+  #desktop-nav {
+    display: block;
+  }
+  #welcome {
+    background-image: url("assets/background/header-desktop.svg");
+    justify-content: center;
+    gap: 20px;
+    background-size: cover;
+  }
+  .description {
+    max-width: 65%;
+  }
+  #recent-works {
+    grid-template: auto repeat(3, 1fr) / repeat(2, 1fr);
+  }
+  #group {
+    grid-column: 1 / span 2;
+  }
+  #indicator {
+    display: none;
+  }
+  #about-me-intro {
+    background-image: url("./assets/background/about-me-desktop.svg");
+    background-size: cover;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #recent-works {
+    grid-template: auto repeat(2, 1fr) / repeat(3, 1fr);
+    column-gap: 1.5rem;
+  }
+  #group {
+    grid-column: 1 / span 3;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

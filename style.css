@@ -46,7 +46,7 @@ header {
   display: none;
 }
 
-#desktop-nav > a {
+.nav-item {
   color: var(--navy);
   font: 0.9rem;
   text-align: center;

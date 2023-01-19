@@ -10,8 +10,14 @@
   --smoke: #ebf0ee;
   --dark: #28352f;
   --gray: #505f79;
-  --light-gray: #6b778c;
+  --light-gray: #dfe1e6;
+  --dim-gray: #6b778c;
   --dark-blue: #091e42;
+  --facebook: #15a2fa;
+  --twitter: #1d9bf0;
+  --whatsapp: #27cc37;
+  --linkedin: #0077b5;
+  --gmail: #ea4335;
 }
 
 .flex-center {
@@ -64,7 +70,7 @@ a {
   align-items: center;
   flex-direction: column;
   background-image: url("./assets/background/header.svg");
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   min-height: 90vh;
 }
@@ -103,6 +109,26 @@ a {
   margin: 0.5rem;
   color: var(--gray);
   font-size: 1.5rem;
+}
+
+.facebook:hover {
+  color: var(--facebook);
+}
+
+.twitter:hover {
+  color: var(--twitter);
+}
+
+.linkedin:hover {
+  color: var(--linkedin);
+}
+
+.whatsapp:hover {
+  color: var(--whatsapp);
+}
+
+.gmail:hover {
+  color: var(--gmail);
 }
 
 #scroll-bottom {
@@ -195,7 +221,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin: 2rem 0;
 }
 
@@ -218,8 +244,9 @@ a {
   overflow: hidden;
   background-color: var(--smoke);
   width: 20.5rem;
+  height: 21rem;
   padding: 2rem 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
 }
 
 .icon-wrapper {
@@ -258,9 +285,18 @@ a {
   gap: 20px;
 }
 
+#contact {
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  background-image: url(./assets/background/contact-form.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
 .contact-input {
   border-radius: 0.25rem;
-  color: var(--light-gray);
+  color: var(--dim-gray);
   background-color: var(--white);
   padding: 1rem;
   border: 1px solid var(--smoke);
@@ -283,9 +319,6 @@ a {
 footer {
   flex-direction: column;
   width: 100%;
-  background-image: url(./assets/background/contact-form.svg);
-  background-repeat: no-repeat;
-  background-position: right top;
 }
 
 .footer-email {
@@ -299,12 +332,11 @@ footer {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   #welcome {
-    background-size: cover;
-    min-height: 100vh;
     background-position: center;
   }
-  #about-me-intro {
-    height: 70vh;
+
+  #contact-form-caption {
+    max-width: 80%;
   }
 }
 
@@ -313,34 +345,73 @@ footer {
   header {
     justify-content: center;
   }
+
   #logo,
   #humberger {
     display: none;
   }
+
   #desktop-nav {
     display: block;
   }
+
   #welcome {
     background-image: url("assets/background/header-desktop.svg");
     justify-content: center;
     gap: 20px;
     background-size: cover;
   }
+
   .description {
     max-width: 65%;
   }
+
   #recent-works {
     grid-template: auto repeat(3, 1fr) / repeat(2, 1fr);
   }
+
   #group {
     grid-column: 1 / span 2;
   }
+
   #indicator {
     display: none;
   }
+
   #about-me-intro {
     background-image: url("./assets/background/about-me-desktop.svg");
-    background-size: cover;
+    background-size: 100%;
+  }
+
+  #contact {
+    background-image: url("./assets/background/contact-form-desktop.svg");
+    background-size: 100%;
+    background-position: center;
+    padding: 5rem 0 20rem 0;
+  }
+
+  #contact-form {
+    width: 50%;
+    align-items: flex-start;
+  }
+
+  #contact-form-caption {
+    font-size: 2rem;
+    width: 35%;
+  }
+
+  .contact-input,
+  #message {
+    width: 85%;
+    padding: 1rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--dim-gray);
+  }
+
+  .footer-email {
+    display: none;
   }
 }
 
@@ -348,13 +419,32 @@ footer {
 @media only screen and (min-width: 992px) {
   #recent-works {
     grid-template: auto repeat(2, 1fr) / repeat(3, 1fr);
-    column-gap: 1.5rem;
   }
+
   #group {
     grid-column: 1 / span 3;
+  }
+
+  #contact {
+    padding-top: 10rem;
+  }
+
+  #contact-form {
+    gap: 30px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  html {
+    font-size: 125%;
+  }
+
+  #about-me-intro {
+    min-width: 100%;
+  }
+
+  #contact-form {
+    gap: 40px;
+  }
 }

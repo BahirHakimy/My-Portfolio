@@ -86,7 +86,7 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Desktop Version**
+- **Project Detail**
 
 <p align="right"><a href="#readme-top">👆</a></p>
 

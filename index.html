@@ -15,8 +15,13 @@
     <main>
       <header>
         <a href="#" id="logo">Welcome</a>
-        <nav>
+        <nav id="humberger">
           <i class="fa-solid fa-bars"></i>
+        </nav>
+        <nav id="desktop-nav">
+          <a href="#welcome" class="nav-item">Portfolio</a>
+          <a href="#about-me" class="nav-item">About</a>
+          <a href="#contact-form" class="nav-item">Contact</a>
         </nav>
       </header>
       <section id="welcome">
@@ -30,29 +35,35 @@
           of my work and experience! If you like what you see and have a project
           you need coded, don’t hestiate to contact me.
         </p>
-        <ul class="social-icons">
+        <ul class="social-icons flex-center">
           <li class="social-icon">
-            <a href="https://www.facebook.com/profile.php?id=100004886324671">
+            <a
+              href="https://www.facebook.com/profile.php?id=100004886324671"
+              class="facebook"
+            >
               <i class="fa-brands fa-facebook"></i>
             </a>
           </li>
           <li class="social-icon">
-            <a href="https://twitter.com/bahir_hakimy">
+            <a href="https://twitter.com/bahir_hakimy" class="twitter">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </li>
           <li class="social-icon">
-            <a href="https://www.linkedin.com/in/bahir-hakimy/">
+            <a
+              href="https://www.linkedin.com/in/bahir-hakimy/"
+              class="linkedin"
+            >
               <i class="fa-brands fa-linkedin"></i>
             </a>
           </li>
           <li class="social-icon">
-            <a href="tel:+93744570916">
+            <a href="tel:+93744570916" class="whatsapp">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </li>
           <li class="social-icon">
-            <a href="mailto:bahirhakimy2020@gmail.com">
+            <a href="mailto:bahirhakimy2020@gmail.com" class="gmail">
               <i class="fa-solid fa-envelope"></i>
             </a>
           </li>
@@ -186,20 +197,8 @@
           <li class="skill-tag">Terminal</li>
         </ul>
       </div>
-      <div class="about-me-card">
-        <div class="icon-wrapper flex-center">
-          <img src="./assets/icons/Globe.svg" alt="globe" />
-        </div>
-        <h3 class="skill-title">Languages</h3>
-        <ul class="skill-list flex-center">
-          <li class="skill-tag">JavaScript</li>
-          <li class="skill-tag">Ruby</li>
-          <li class="skill-tag">Html</li>
-          <li class="skill-tag">CSS</li>
-        </ul>
-      </div>
     </section>
-    <section id="contact-form" class="flex-center">
+    <section id="contact" class="flex-center">
       <h3 id="contact-form-caption" class="heading text-secondary">
         I'm always interested in hearing about new projects, so if you'd like to
         chat please get in touch.
@@ -239,38 +238,41 @@
           Get in touch
         </button>
       </form>
-      <footer class="flex-center">
-        <ul class="social-icons flex-center">
-          <li class="social-icon">
-            <a href="https://www.facebook.com/profile.php?id=100004886324671">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="https://twitter.com/bahir_hakimy">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="https://www.linkedin.com/in/bahir-hakimy/">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="tel:+93744570916">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </li>
-          <li class="social-icon">
-            <a href="mailto:bahirhakimy2020@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          </li>
-        </ul>
-        <a class="footer-email" href="mailto:bahirhakimy2020@gmail.com"
-          >bahirhakimy2020@gmail.com</a
-        >
-      </footer>
     </section>
+    <footer class="flex-center">
+      <ul class="social-icons flex-center">
+        <li class="social-icon">
+          <a
+            href="https://www.facebook.com/profile.php?id=100004886324671"
+            class="facebook"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="social-icon">
+          <a href="https://twitter.com/bahir_hakimy" class="twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+        <li class="social-icon">
+          <a href="https://www.linkedin.com/in/bahir-hakimy/" class="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-icon">
+          <a href="tel:+93744570916" class="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </li>
+        <li class="social-icon">
+          <a href="mailto:bahirhakimy2020@gmail.com" class="gmail">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <a class="footer-email" href="mailto:bahirhakimy2020@gmail.com"
+        >bahirhakimy2020@gmail.com</a
+      >
+    </footer>
   </body>
 </html>

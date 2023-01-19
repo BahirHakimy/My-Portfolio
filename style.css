@@ -53,6 +53,7 @@ header {
   font-weight: 600;
   line-height: 1.25rem;
   margin: auto 1rem;
+  transition: all .3s;
 }
 
 a {
@@ -469,3 +470,17 @@ footer {
     height: auto;
   }
 }
+
+
+ /* Add animations */
+
+ .nav-item:hover {
+  color: white;
+  background: var(--primary);
+  font-size: 30px;
+  padding: 8px;
+ }
+
+ .nav-item:active {
+  background-color: aqua;
+ }

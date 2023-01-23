@@ -53,7 +53,7 @@ header {
   font-weight: 600;
   line-height: 1.25rem;
   margin: auto 1rem;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 a {
@@ -85,13 +85,12 @@ a {
 
 #greeting-caption {
   display: inline-block;
-  animation-name: typeAnim;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: steps(40, end);
-  animation-fill-mode: forwards;
+  letter-spacing: auto;
+  animation: typeAnim 3s steps(40, end) 1 forwards,
+    flush 0.5s linear infinite forwards;
   overflow: hidden;
-  height: 4rem;
+  white-space: nowrap;
+  height: auto;
 }
 
 .text-secondary {
@@ -467,20 +466,29 @@ footer {
   }
   to {
     width: 100%;
-    height: auto;
   }
 }
 
+@keyframes flush {
+  from {
+    border-right: transparent;
+  }
+  50% {
+    border-right: 2px solid var(--secondary);
+  }
+  to {
+    border-right: transparent;
+  }
+}
 
- /* Add animations */
-
- .nav-item:hover {
+/* Add animations */
+.nav-item:hover {
   color: white;
   background: var(--primary);
   font-size: 30px;
   padding: 8px;
- }
+}
 
- .nav-item:active {
+.nav-item:active {
   background-color: aqua;
- }
+}

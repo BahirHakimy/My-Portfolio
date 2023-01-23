@@ -26,6 +26,10 @@
   align-items: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: auto;
@@ -81,16 +85,6 @@ a {
   font-weight: 700;
   text-align: center;
   margin: 0.75rem;
-}
-
-#greeting-caption {
-  display: inline-block;
-  letter-spacing: auto;
-  animation: typeAnim 3s steps(40, end) 1 forwards,
-    flush 0.5s linear infinite forwards;
-  overflow: hidden;
-  white-space: nowrap;
-  height: auto;
 }
 
 .text-secondary {
@@ -366,11 +360,27 @@ footer {
     display: block;
   }
 
-  #welcome {
+  main {
     background-image: url("assets/background/header-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #welcome {
+    background-image: none;
     justify-content: center;
     gap: 20px;
-    background-size: cover;
+  }
+
+  #greeting-caption {
+    display: inline-block;
+    letter-spacing: auto;
+    animation: typeAnim 3s steps(40, end) 1 forwards,
+      flush 0.5s linear infinite forwards;
+    overflow: hidden;
+    height: auto;
+    white-space: nowrap;
   }
 
   .description {

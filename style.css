@@ -18,6 +18,36 @@
   --whatsapp: #27cc37;
   --linkedin: #0077b5;
   --gmail: #ea4335;
+  --bg-header-mobile: url("./assets/background/header.svg");
+  --bg-about-me-mobile: url("./assets/background/about-me.svg");
+  --bg-contact-form-mobile: url("./assets/background/contact-form.svg");
+  --bg-header-desktop: url("assets/background/header-desktop.svg");
+  --bg-about-me-desktop: url("./assets/background/about-me-desktop.svg");
+  --bg-contact-form-mobile: url("./assets/background/contact-form-desktop.svg");
+}
+
+body.theme2 {
+  --primary: #1e488f;
+  --light: #e2edff;
+  --somke: #ebeff4;
+  --bg-header-mobile: url("./assets/background/headert2.svg");
+  --bg-about-me-mobile: url("./assets/background/about-met2.svg");
+  --bg-contact-form-mobile: url("./assets/background/contact-formt2.svg");
+  --bg-header-desktop: url("assets/background/header-desktopt2.svg");
+  --bg-about-me-desktop: url("./assets/background/about-me-desktopt2.svg");
+  --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt2.svg");
+}
+
+body.theme3 {
+  --primary: #ff6163;
+  --light: #ffe7e8;
+  --somke: #f9eaea;
+  --bg-header-mobile: url("./assets/background/headert3.svg");
+  --bg-about-me-mobile: url("./assets/background/about-met3.svg");
+  --bg-contact-form-mobile: url("./assets/background/contact-formt3.svg");
+  --bg-header-desktop: url("assets/background/header-desktopt3.svg");
+  --bg-about-me-desktop: url("./assets/background/about-me-desktopt3.svg");
+  --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt3.svg");
 }
 
 .flex-center {
@@ -31,8 +61,36 @@ html {
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
   margin: auto;
+}
+
+#theme-panel {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  cursor: default;
+}
+
+.theme-selector {
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#theme1 {
+  background-color: #36b37e;
+}
+
+#theme2 {
+  background-color: #1e488f;
+}
+
+#theme3 {
+  background-color: #ff6163;
 }
 
 header {
@@ -74,7 +132,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-image: url("./assets/background/header.svg");
+  background-image: var(--bg-header-mobile);
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 90vh;
@@ -228,11 +286,12 @@ a {
   align-items: center;
   flex-wrap: wrap;
   margin: 2rem 0;
+  overflow-x: hidden;
 }
 
 #about-me-intro {
   flex-direction: column;
-  background-image: url("./assets/background/about-me.svg");
+  background-image: var(--bg-about-me-mobile);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -294,7 +353,7 @@ a {
   flex-wrap: wrap;
   gap: 40px;
   width: 100%;
-  background-image: url(./assets/background/contact-form.svg);
+  background-image: var(--bg-contact-form-mobile);
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -361,7 +420,7 @@ footer {
   }
 
   main {
-    background-image: url("assets/background/header-desktop.svg");
+    background-image: var(--bg-header-desktop);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -400,12 +459,12 @@ footer {
   }
 
   #about-me-intro {
-    background-image: url("./assets/background/about-me-desktop.svg");
+    background-image: var(--bg-about-me-desktop);
     background-size: 100%;
   }
 
   #contact {
-    background-image: url("./assets/background/contact-form-desktop.svg");
+    background-image: var(--bg-contact-form-desktop);
     background-size: 100%;
     background-position: center;
     padding: 5rem 0 20rem 0;

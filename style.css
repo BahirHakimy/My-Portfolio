@@ -1,5 +1,5 @@
 :root {
-  --primary: #36b37e;
+  --primary: #28865f;
   --light-green: #60c095;
   --active: #008552;
   --natural: #3a4a42;
@@ -53,7 +53,7 @@ header {
   font-weight: 600;
   line-height: 1.25rem;
   margin: auto 1rem;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 a {
@@ -471,16 +471,15 @@ footer {
   }
 }
 
+/* Add animations */
 
- /* Add animations */
-
- .nav-item:hover {
+.nav-item:hover {
   color: white;
   background: var(--primary);
   font-size: 30px;
   padding: 8px;
- }
+}
 
- .nav-item:active {
+.nav-item:active {
   background-color: aqua;
- }
+}

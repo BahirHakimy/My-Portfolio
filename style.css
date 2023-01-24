@@ -397,6 +397,7 @@ footer {
   #about-me-intro {
     background-image: url("./assets/background/about-me-desktop.svg");
     background-size: 100%;
+    min-height: 60vh;
   }
 
   #contact {

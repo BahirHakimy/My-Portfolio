@@ -9,8 +9,14 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
@@ -53,6 +59,7 @@
 - **Beautifull UI**
 - **Mobile-first**
 - **Responsive**
+- **SEO and Accessibility Friendly**
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -61,6 +68,30 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://bahirhakimy.github.io/My-Portfolio/)
+
+<p align="right"><a href="#readme-top">👆</a></p>
+
+<!-- Getting Started -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To run the project locally, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+-Install [Git](https://git-scm.com/)
+-Install a code editor, I suggest [VsCode](https://code.visualstudio.com/)
+
+### Setup
+
+Clone the repo into your local machine:
+git clone github.com/BahirHakimy/My-Portfolio.git
+
+
+### Usage
+
+You can open the `index.html` file using a web browser or using VsCode extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
@@ -80,6 +111,10 @@
 - Twitter: [Muhammad Davlatov](https://twitter.com/MuhammadDavla20)
 - LinkedIn: [Muhammad Davlatov](https://www.linkedin.com/in/muhammad-davlatov-6a8536254/)
 
+👤 **[Alejandro-Bernal-M]**
+
+- GitHub: [Muhammad0602](https://github.com/Alejandro-Bernal-M)
+
 <p align="right"><a href="#readme-top">👆</a></p>
 
 <!-- FUTURE FEATURES -->
@@ -87,6 +122,25 @@
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Project Detail**
+- **Multiple color themes**
+
+<p align="right"><a href="#readme-top">👆</a></p>
+
+<!-- Contributing -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right"><a href="#readme-top">👆</a></p>
+
+<!-- Show your support -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project leave a start for it.
 
 <p align="right"><a href="#readme-top">👆</a></p>
 

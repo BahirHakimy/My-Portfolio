@@ -1,5 +1,5 @@
 :root {
-  --primary: #36b37e;
+  --primary: #28865f;
   --light-green: #60c095;
   --active: #008552;
   --natural: #3a4a42;
@@ -24,6 +24,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
 }
 
 body {
@@ -53,7 +57,7 @@ header {
   font-weight: 600;
   line-height: 1.25rem;
   margin: auto 1rem;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 a {
@@ -393,6 +397,7 @@ footer {
   #about-me-intro {
     background-image: url("./assets/background/about-me-desktop.svg");
     background-size: 100%;
+    min-height: 60vh;
   }
 
   #contact {
@@ -465,22 +470,22 @@ footer {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
     height: auto;
   }
 }
 
+/* Add animations */
 
- /* Add animations */
-
- .nav-item:hover {
+.nav-item:hover {
   color: white;
   background: var(--primary);
   font-size: 30px;
   padding: 8px;
- }
+}
 
- .nav-item:active {
+.nav-item:active {
   background-color: aqua;
- }
+}

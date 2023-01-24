@@ -26,6 +26,10 @@
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: auto;

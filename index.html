@@ -40,6 +40,7 @@
         <ul class="social-icons flex-center">
           <li class="social-icon">
             <a
+              aria-label="facebook"
               href="https://www.facebook.com/profile.php?id=100004886324671"
               class="facebook"
             >
@@ -47,12 +48,17 @@
             </a>
           </li>
           <li class="social-icon">
-            <a href="https://twitter.com/bahir_hakimy" class="twitter">
+            <a
+              aria-label="twitter"
+              href="https://twitter.com/bahir_hakimy"
+              class="twitter"
+            >
               <i class="fa-brands fa-twitter"></i>
             </a>
           </li>
           <li class="social-icon">
             <a
+              aria-label="linkedin"
               href="https://www.linkedin.com/in/bahir-hakimy/"
               class="linkedin"
             >
@@ -60,12 +66,16 @@
             </a>
           </li>
           <li class="social-icon">
-            <a href="tel:+93744570916" class="whatsapp">
+            <a aria-label="whatsapp" href="tel:+93744570916" class="whatsapp">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </li>
           <li class="social-icon">
-            <a href="mailto:bahirhakimy2020@gmail.com" class="gmail">
+            <a
+              aria-label="gmail"
+              href="mailto:bahirhakimy2020@gmail.com"
+              class="gmail"
+            >
               <i class="fa-solid fa-envelope"></i>
             </a>
           </li>
@@ -175,7 +185,7 @@
       </div>
       <div class="about-me-card">
         <div class="icon-wrapper flex-center">
-          <img src="./assets/icons/Boxes.svg" alt="globe" />
+          <img src="./assets/icons/Boxes.svg" alt="boxes" />
         </div>
         <h2 class="skill-title">Frameworks</h2>
         <ul class="skill-list flex-center">
@@ -188,7 +198,7 @@
       </div>
       <div class="about-me-card">
         <div class="icon-wrapper flex-center">
-          <img src="./assets/icons/Lightinings.svg" alt="globe" />
+          <img src="./assets/icons/Lightinings.svg" alt="lightnings" />
         </div>
         <h2 class="skill-title">Skills</h2>
         <ul class="skill-list flex-center">
@@ -211,7 +221,9 @@
         id="contact-form"
         class="flex-center"
       >
+        <label for="full-name" class="hidden"></label>
         <input
+          id="full-name"
           type="text"
           maxlength="30"
           required
@@ -219,6 +231,7 @@
           name="full-name"
           placeholder="Full Name"
         />
+        <label for="email" class="hidden"></label>
         <input
           id="email"
           type="email"
@@ -227,6 +240,7 @@
           name="email-address"
           placeholder="Email address"
         />
+        <label for="message" class="hidden"></label>
         <textarea
           placeholder="Enter text here"
           name="message"
@@ -245,6 +259,7 @@
       <ul class="social-icons flex-center">
         <li class="social-icon">
           <a
+            aria-label="facebook"
             href="https://www.facebook.com/profile.php?id=100004886324671"
             class="facebook"
           >
@@ -252,22 +267,34 @@
           </a>
         </li>
         <li class="social-icon">
-          <a href="https://twitter.com/bahir_hakimy" class="twitter">
+          <a
+            aria-label="twitter"
+            href="https://twitter.com/bahir_hakimy"
+            class="twitter"
+          >
             <i class="fa-brands fa-twitter"></i>
           </a>
         </li>
         <li class="social-icon">
-          <a href="https://www.linkedin.com/in/bahir-hakimy/" class="linkedin">
+          <a
+            aria-label="linkedin"
+            href="https://www.linkedin.com/in/bahir-hakimy/"
+            class="linkedin"
+          >
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </li>
         <li class="social-icon">
-          <a href="tel:+93744570916" class="whatsapp">
+          <a aria-label="whatsapp" href="tel:+93744570916" class="whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </li>
         <li class="social-icon">
-          <a href="mailto:bahirhakimy2020@gmail.com" class="gmail">
+          <a
+            aria-label="gmail"
+            href="mailto:bahirhakimy2020@gmail.com"
+            class="gmail"
+          >
             <i class="fa-solid fa-envelope"></i>
           </a>
         </li>

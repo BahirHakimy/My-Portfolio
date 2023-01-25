@@ -23,13 +23,13 @@
   --bg-contact-form-mobile: url("./assets/background/contact-form.svg");
   --bg-header-desktop: url("assets/background/header-desktop.svg");
   --bg-about-me-desktop: url("./assets/background/about-me-desktop.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-form-desktop.svg");
+  --bg-contact-form-desktop: url("./assets/background/contact-form-desktop.svg");
 }
 
 body.theme2 {
   --primary: #1e488f;
   --light: #e2edff;
-  --somke: #ebeff4;
+  --smoke: #ebeff4;
   --bg-header-mobile: url("./assets/background/headert2.svg");
   --bg-about-me-mobile: url("./assets/background/about-met2.svg");
   --bg-contact-form-mobile: url("./assets/background/contact-formt2.svg");
@@ -41,7 +41,7 @@ body.theme2 {
 body.theme3 {
   --primary: #ff6163;
   --light: #ffe7e8;
-  --somke: #f9eaea;
+  --smoke: #f9eaea;
   --bg-header-mobile: url("./assets/background/headert3.svg");
   --bg-about-me-mobile: url("./assets/background/about-met3.svg");
   --bg-contact-form-mobile: url("./assets/background/contact-formt3.svg");

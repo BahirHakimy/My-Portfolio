@@ -488,9 +488,8 @@ footer {
   #greeting-caption {
     display: inline-block;
     letter-spacing: auto;
-    animation: 
-    typeAnim 3s steps(40, end) 1 forwards,
-    flush 0.5s linear infinite forwards;
+    animation: typeAnim 3s steps(40, end) 1 forwards,
+      flush 0.5s linear infinite forwards;
     overflow: hidden;
     height: auto;
     white-space: nowrap;
@@ -588,7 +587,6 @@ footer {
   from {
     width: 0%;
   }
-  
   to {
     width: 100%;
   }

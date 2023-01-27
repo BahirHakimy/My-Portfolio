@@ -50,6 +50,16 @@ body.theme3 {
   --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt3.svg");
 }
 
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: var(--smoke);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -70,15 +80,36 @@ body {
   position: fixed;
   bottom: 0.5rem;
   right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  justify-content: flex-end;
   cursor: default;
+  gap: 0.3rem;
+  background-color: var(--smoke);
+  padding: 0.3rem;
+  border-radius: 1rem;
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .theme-selector {
   border: none;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 0;
+  height: 0;
   border-radius: 50%;
   cursor: pointer;
+  display: none;
+  transition: all 0.5s;
+}
+
+#theme-panel:hover {
+  width: 7rem;
+}
+
+#theme-panel:hover > button {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #theme1 {
@@ -91,6 +122,24 @@ body {
 
 #theme3 {
   background-color: #ff6163;
+}
+
+#theme1:hover {
+  outline: 2px solid #36b37e;
+}
+
+#theme2:hover {
+  outline: 2px solid #1e488f;
+}
+
+#theme3:hover {
+  outline: 2px solid #ff6163;
+}
+
+#back-to-top {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
 }
 
 header {

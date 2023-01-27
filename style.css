@@ -1,5 +1,5 @@
 :root {
-  --primary: #36b37e;
+  --primary: #28865f;
   --light-green: #60c095;
   --active: #008552;
   --natural: #3a4a42;
@@ -64,6 +64,10 @@ body.theme3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
 }
 
 html {
@@ -510,6 +514,7 @@ footer {
   #about-me-intro {
     background-image: var(--bg-about-me-desktop);
     background-size: 100%;
+    min-height: 60vh;
   }
 
   #contact {
@@ -582,6 +587,7 @@ footer {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
   }
@@ -599,7 +605,6 @@ footer {
   }
 }
 
-/* Add animations */
 .nav-item:hover {
   color: white;
   background: var(--primary);

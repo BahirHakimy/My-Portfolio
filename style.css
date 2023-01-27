@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: var(--smoke);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+}
+
 :root {
   --primary: #36b37e;
   --light-green: #60c095;
@@ -48,16 +58,6 @@ body.theme3 {
   --bg-header-desktop: url("assets/background/header-desktopt3.svg");
   --bg-about-me-desktop: url("./assets/background/about-me-desktopt3.svg");
   --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt3.svg");
-}
-
-::-webkit-scrollbar {
-  width: 0.3rem;
-  background-color: var(--smoke);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-  border-radius: 0.5rem;
 }
 
 .flex-center {
@@ -484,7 +484,8 @@ footer {
   #greeting-caption {
     display: inline-block;
     letter-spacing: auto;
-    animation: typeAnim 3s steps(40, end) 1 forwards,
+    animation: 
+      typeAnim 3s steps(40, end) 1 forwards,
       flush 0.5s linear infinite forwards;
     overflow: hidden;
     height: auto;
@@ -582,6 +583,7 @@ footer {
   from {
     width: 0%;
   }
+  
   to {
     width: 100%;
   }
@@ -591,15 +593,16 @@ footer {
   from {
     border-right: transparent;
   }
+
   50% {
     border-right: 2px solid var(--secondary);
   }
+
   to {
     border-right: transparent;
   }
 }
 
-/* Add animations */
 .nav-item:hover {
   color: white;
   background: var(--primary);

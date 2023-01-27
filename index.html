@@ -11,7 +11,36 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="theme1">
+    <div id="theme-panel" class="flex-center">
+      <button
+        title="Select color-theme 1"
+        id="theme1"
+        class="theme-selector"
+        onclick="setTheme('theme1')"
+      ></button>
+      <button
+        title="Select color-theme 2"
+        id="theme2"
+        class="theme-selector"
+        onclick="setTheme('theme2')"
+      ></button>
+      <button
+        title="Select color-theme 3"
+        id="theme3"
+        class="theme-selector"
+        onclick="setTheme('theme3')"
+      ></button>
+      <a
+        href="#welcome"
+        id="back-to-top"
+        class="flex-center"
+        aria-label="back-to-top"
+        title="back to top"
+      >
+        <i class="fa-solid fa-chevron-up"></i
+      ></a>
+    </div>
     <main>
       <header>
         <a href="#" id="logo">Welcome</a>
@@ -27,7 +56,7 @@
       <section id="welcome">
         <h1 id="welcome-heading" class="heading">
           <span class="text-secondary" id="greeting-caption"
-            >Hey there. I’m Bahir</span
+            >Hey there. I’m Bahir.</span
           >
           <br />
           <span class="text-primary"> I’m a software developer</span>
@@ -81,9 +110,13 @@
           </li>
         </ul>
         <div id="scroll-bottom">
-          <div class="icon flex-center">
+          <a
+            href="#recent-works"
+            class="icon flex-center"
+            aria-label="scroll-to-works"
+          >
             <i class="fa-solid fa-chevron-down"></i>
-          </div>
+          </a>
         </div>
       </section>
     </main>
@@ -303,5 +336,15 @@
         >bahirhakimy2020@gmail.com</a
       >
     </footer>
+    <script>
+      let theme = window.localStorage.getItem("prefered-theme");
+      if (theme) {
+        setTheme(theme);
+      }
+      function setTheme(theme) {
+        document.body.className = theme;
+        window.localStorage.setItem("prefered-theme", theme);
+      }
+    </script>
   </body>
 </html>

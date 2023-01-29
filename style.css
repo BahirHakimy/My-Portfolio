@@ -327,6 +327,12 @@ a {
   border: none;
   margin: 1rem 0;
   letter-spacing: 0.03rem;
+  transition: box-shadow 0.2s;
+}
+
+.button:hover {
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--dark);
+  transform: scale(1.05);
 }
 
 .button:active {

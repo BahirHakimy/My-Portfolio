@@ -42,15 +42,14 @@
       ></a>
     </div>
     <main>
-      <header id="header" class="mobile-header">
+      <header id="header">
         <a href="#" id="logo">Welcome</a>
-        <nav id="hamburger" class="mobile-button">
-          <!-- <i class="fa-solid fa-bars"></i> -->
-          <i class="fa-solid fa-xmark"></i>
+        <nav id="hamburger">
+          <i class="fa-solid fa-bars"></i>
         </nav>
-        <nav class="desktop-nav mobile-nav">
-          <a href="#welcome" class="nav-item mobile-nav-item">Portfolio</a>
-          <a href="#about-me" class="nav-item mobile-nav-item">About</a>
+        <nav class="desktop-nav">
+          <a href="#welcome" class="nav-item">Portfolio</a>
+          <a href="#about-me" class="nav-item">About</a>
           <a href="#contact-form" class="nav-item mobile-nav-item">Contact</a>
         </nav>
       </header>
@@ -341,15 +340,6 @@
         >bahirhakimy2020@gmail.com</a
       >
     </footer>
-    <script>
-      let theme = window.localStorage.getItem("prefered-theme");
-      if (theme) {
-        setTheme(theme);
-      }
-      function setTheme(theme) {
-        document.body.className = theme;
-        window.localStorage.setItem("prefered-theme", theme);
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

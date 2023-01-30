@@ -42,15 +42,16 @@
       ></a>
     </div>
     <main>
-      <header>
+      <header id="header" class="mobile-header">
         <a href="#" id="logo">Welcome</a>
-        <nav id="humberger">
-          <i class="fa-solid fa-bars"></i>
+        <nav id="hamburger" class="mobile-button">
+          <!-- <i class="fa-solid fa-bars"></i> -->
+          <i class="fa-solid fa-xmark"></i>
         </nav>
-        <nav id="desktop-nav">
-          <a href="#welcome" class="nav-item">Portfolio</a>
-          <a href="#about-me" class="nav-item">About</a>
-          <a href="#contact-form" class="nav-item">Contact</a>
+        <nav class="desktop-nav mobile-nav">
+          <a href="#welcome" class="nav-item mobile-nav-item">Portfolio</a>
+          <a href="#about-me" class="nav-item mobile-nav-item">About</a>
+          <a href="#contact-form" class="nav-item mobile-nav-item">Contact</a>
         </nav>
       </header>
       <section id="welcome">
@@ -318,7 +319,11 @@
           </a>
         </li>
         <li class="social-icon">
-          <a aria-label="whatsapp link" href="tel:+93744570916" class="whatsapp">
+          <a
+            aria-label="whatsapp link"
+            href="tel:+93744570916"
+            class="whatsapp"
+          >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </li>

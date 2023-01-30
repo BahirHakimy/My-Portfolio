@@ -157,7 +157,33 @@ header {
   line-height: 3rem;
 }
 
-#desktop-nav {
+.mobile-header {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  height: 90vh;
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--gray);
+}
+
+.mobile-button {
+  align-self: flex-end;
+  margin: 1.25rem 1.25rem 0 0;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#logo {
   display: none;
 }
 
@@ -169,6 +195,13 @@ header {
   line-height: 1.25rem;
   margin: auto 1rem;
   transition: all 0.3s;
+}
+
+.mobile-nav-item {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: start;
+  margin: 20px 1rem;
 }
 
 a {
@@ -470,11 +503,11 @@ footer {
   }
 
   #logo,
-  #humberger {
+  #hamburger {
     display: none;
   }
 
-  #desktop-nav {
+  .desktop-nav {
     display: block;
   }
 

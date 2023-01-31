@@ -42,15 +42,21 @@
       ></a>
     </div>
     <main>
-      <header>
+      <header id="header">
         <a href="#" id="logo">Welcome</a>
-        <nav id="humberger">
-          <i class="fa-solid fa-bars"></i>
+        <nav id="hamburger">
+          <i id="hamburger-icon" class="fa-solid fa-bars"></i>
         </nav>
-        <nav id="desktop-nav">
-          <a href="#welcome" class="nav-item">Portfolio</a>
-          <a href="#about-me" class="nav-item">About</a>
-          <a href="#contact-form" class="nav-item">Contact</a>
+        <nav class="desktop-nav">
+          <a href="#welcome" onclick="hideMobileNav()" class="nav-item"
+            >Portfolio</a
+          >
+          <a href="#about-me" onclick="hideMobileNav()" class="nav-item"
+            >About</a
+          >
+          <a href="#contact-form" onclick="hideMobileNav()" class="nav-item"
+            >Contact</a
+          >
         </nav>
       </header>
       <section id="welcome">
@@ -318,7 +324,11 @@
           </a>
         </li>
         <li class="social-icon">
-          <a aria-label="whatsapp link" href="tel:+93744570916" class="whatsapp">
+          <a
+            aria-label="whatsapp link"
+            href="tel:+93744570916"
+            class="whatsapp"
+          >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </li>
@@ -336,15 +346,6 @@
         >bahirhakimy2020@gmail.com</a
       >
     </footer>
-    <script>
-      let theme = window.localStorage.getItem("prefered-theme");
-      if (theme) {
-        setTheme(theme);
-      }
-      function setTheme(theme) {
-        document.body.className = theme;
-        window.localStorage.setItem("prefered-theme", theme);
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

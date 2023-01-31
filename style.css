@@ -28,36 +28,36 @@
   --whatsapp: #27cc37;
   --linkedin: #0077b5;
   --gmail: #ea4335;
-  --bg-header-mobile: url("./assets/background/header.svg");
-  --bg-about-me-mobile: url("./assets/background/about-me.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-form.svg");
-  --bg-header-desktop: url("assets/background/header-desktop.svg");
-  --bg-about-me-desktop: url("./assets/background/about-me-desktop.svg");
-  --bg-contact-form-desktop: url("./assets/background/contact-form-desktop.svg");
+  --bg-header-mobile: url('./assets/background/header.svg');
+  --bg-about-me-mobile: url('./assets/background/about-me.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-form.svg');
+  --bg-header-desktop: url('assets/background/header-desktop.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktop.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktop.svg');
 }
 
 body.theme2 {
   --primary: #1e488f;
   --light: #e2edff;
   --smoke: #ebeff4;
-  --bg-header-mobile: url("./assets/background/headert2.svg");
-  --bg-about-me-mobile: url("./assets/background/about-met2.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-formt2.svg");
-  --bg-header-desktop: url("assets/background/header-desktopt2.svg");
-  --bg-about-me-desktop: url("./assets/background/about-me-desktopt2.svg");
-  --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt2.svg");
+  --bg-header-mobile: url('./assets/background/headert2.svg');
+  --bg-about-me-mobile: url('./assets/background/about-met2.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-formt2.svg');
+  --bg-header-desktop: url('assets/background/header-desktopt2.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktopt2.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktopt2.svg');
 }
 
 body.theme3 {
   --primary: #ff6163;
   --light: #ffe7e8;
   --smoke: #f9eaea;
-  --bg-header-mobile: url("./assets/background/headert3.svg");
-  --bg-about-me-mobile: url("./assets/background/about-met3.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-formt3.svg");
-  --bg-header-desktop: url("assets/background/header-desktopt3.svg");
-  --bg-about-me-desktop: url("./assets/background/about-me-desktopt3.svg");
-  --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt3.svg");
+  --bg-header-mobile: url('./assets/background/headert3.svg');
+  --bg-about-me-mobile: url('./assets/background/about-met3.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-formt3.svg');
+  --bg-header-desktop: url('assets/background/header-desktopt3.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktopt3.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktopt3.svg');
 }
 
 .flex-center {
@@ -76,7 +76,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: auto;
 }
 
@@ -147,6 +147,8 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,20 +157,51 @@ header {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 3rem;
+  width: 94%;
 }
 
-#desktop-nav {
+.mobile-header {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--white);
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  height: 90vh;
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--gray);
+}
+
+.mobile-button {
+  align-self: flex-end;
+  margin: 1.25rem 1.25rem 0 0;
+}
+
+.desktop-nav {
   display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .nav-item {
   color: var(--navy);
-  font: 0.9rem;
+  font-size: 0.9rem;
   text-align: center;
   font-weight: 600;
   line-height: 1.25rem;
   margin: auto 1rem;
   transition: all 0.3s;
+}
+
+.mobile-nav-item {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: start;
+  margin: 20px 1rem;
 }
 
 a {
@@ -467,14 +500,15 @@ footer {
 @media only screen and (min-width: 768px) {
   header {
     justify-content: center;
+    position: relative;
   }
 
   #logo,
-  #humberger {
+  #hamburger {
     display: none;
   }
 
-  #desktop-nav {
+  .desktop-nav {
     display: block;
   }
 
@@ -493,7 +527,6 @@ footer {
 
   #greeting-caption {
     display: inline-block;
-    letter-spacing: auto;
     animation-name: typeAnim, flush;
     animation-duration: 3s, 0.5s;
     animation-timing-function: steps(40, end), linear;

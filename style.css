@@ -28,36 +28,36 @@
   --whatsapp: #27cc37;
   --linkedin: #0077b5;
   --gmail: #ea4335;
-  --bg-header-mobile: url("./assets/background/header.svg");
-  --bg-about-me-mobile: url("./assets/background/about-me.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-form.svg");
-  --bg-header-desktop: url("assets/background/header-desktop.svg");
-  --bg-about-me-desktop: url("./assets/background/about-me-desktop.svg");
-  --bg-contact-form-desktop: url("./assets/background/contact-form-desktop.svg");
+  --bg-header-mobile: url('./assets/background/header.svg');
+  --bg-about-me-mobile: url('./assets/background/about-me.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-form.svg');
+  --bg-header-desktop: url('assets/background/header-desktop.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktop.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktop.svg');
 }
 
 body.theme2 {
   --primary: #1e488f;
   --light: #e2edff;
   --smoke: #ebeff4;
-  --bg-header-mobile: url("./assets/background/headert2.svg");
-  --bg-about-me-mobile: url("./assets/background/about-met2.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-formt2.svg");
-  --bg-header-desktop: url("assets/background/header-desktopt2.svg");
-  --bg-about-me-desktop: url("./assets/background/about-me-desktopt2.svg");
-  --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt2.svg");
+  --bg-header-mobile: url('./assets/background/headert2.svg');
+  --bg-about-me-mobile: url('./assets/background/about-met2.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-formt2.svg');
+  --bg-header-desktop: url('assets/background/header-desktopt2.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktopt2.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktopt2.svg');
 }
 
 body.theme3 {
   --primary: #ff6163;
   --light: #ffe7e8;
   --smoke: #f9eaea;
-  --bg-header-mobile: url("./assets/background/headert3.svg");
-  --bg-about-me-mobile: url("./assets/background/about-met3.svg");
-  --bg-contact-form-mobile: url("./assets/background/contact-formt3.svg");
-  --bg-header-desktop: url("assets/background/header-desktopt3.svg");
-  --bg-about-me-desktop: url("./assets/background/about-me-desktopt3.svg");
-  --bg-contact-form-desktop: url("./assets/background/contact-form-desktopt3.svg");
+  --bg-header-mobile: url('./assets/background/headert3.svg');
+  --bg-about-me-mobile: url('./assets/background/about-met3.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-formt3.svg');
+  --bg-header-desktop: url('assets/background/header-desktopt3.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktopt3.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktopt3.svg');
 }
 
 .flex-center {
@@ -76,7 +76,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: auto;
 }
 
@@ -189,7 +189,7 @@ header {
 
 .nav-item {
   color: var(--navy);
-  font: 0.9rem;
+  font-size: 0.9rem;
   text-align: center;
   font-weight: 600;
   line-height: 1.25rem;
@@ -527,7 +527,6 @@ footer {
 
   #greeting-caption {
     display: inline-block;
-    letter-spacing: auto;
     animation-name: typeAnim, flush;
     animation-duration: 3s, 0.5s;
     animation-timing-function: steps(40, end), linear;

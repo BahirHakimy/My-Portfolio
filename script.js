@@ -5,13 +5,14 @@ const nav = document.querySelector('.desktop-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const logo = document.getElementById('logo');
 
-let theme = window.localStorage.getItem('prefered-theme');
-if (theme) {
-  setTheme(theme);
-}
 function setTheme(theme) {
   document.body.className = theme;
   window.localStorage.setItem('prefered-theme', theme);
+}
+
+const theme = window.localStorage.getItem('prefered-theme');
+if (theme) {
+  setTheme(theme);
 }
 
 function showMobileNav() {

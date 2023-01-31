@@ -147,6 +147,8 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,12 +157,14 @@ header {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 3rem;
+  width: 94%;
 }
 
 .mobile-header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: var(--white);
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
   height: 90vh;
@@ -181,10 +185,6 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-#logo {
-  display: none;
 }
 
 .nav-item {
@@ -500,6 +500,7 @@ footer {
 @media only screen and (min-width: 768px) {
   header {
     justify-content: center;
+    position: relative;
   }
 
   #logo,

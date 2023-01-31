@@ -45,12 +45,18 @@
       <header id="header">
         <a href="#" id="logo">Welcome</a>
         <nav id="hamburger">
-          <i class="fa-solid fa-bars"></i>
+          <i id="hamburger-icon" class="fa-solid fa-bars"></i>
         </nav>
         <nav class="desktop-nav">
-          <a href="#welcome" class="nav-item">Portfolio</a>
-          <a href="#about-me" class="nav-item">About</a>
-          <a href="#contact-form" class="nav-item mobile-nav-item">Contact</a>
+          <a href="#welcome" onclick="hideMobileNav()" class="nav-item"
+            >Portfolio</a
+          >
+          <a href="#about-me" onclick="hideMobileNav()" class="nav-item"
+            >About</a
+          >
+          <a href="#contact-form" onclick="hideMobileNav()" class="nav-item"
+            >Contact</a
+          >
         </nav>
       </header>
       <section id="welcome">

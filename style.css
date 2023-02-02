@@ -9,25 +9,26 @@
 }
 
 :root {
-  --primary: #28865f;
-  --light-green: #60c095;
   --active: #008552;
-  --natural: #3a4a42;
-  --secondary: #172b4d;
-  --navy: #344563;
-  --white: #fff;
-  --light: #c5e9da;
-  --smoke: #ebf0ee;
   --dark: #28352f;
-  --gray: #505f79;
-  --light-gray: #dfe1e6;
-  --dim-gray: #6b778c;
   --dark-blue: #091e42;
+  --dim-gray: #6b778c;
   --facebook: #15a2fa;
+  --gmail: #ea4335;
+  --glass: #c1c7d0;
+  --gray: #505f79;
+  --light: #c5e9da;
+  --light-gray: #dfe1e6;
+  --light-green: #60c095;
+  --linkedin: #0077b5;
+  --natural: #3a4a42;
+  --navy: #344563;
+  --primary: #28865f;
+  --secondary: #172b4d;
+  --smoke: #ebf0ee;
   --twitter: #1d9bf0;
   --whatsapp: #27cc37;
-  --linkedin: #0077b5;
-  --gmail: #ea4335;
+  --white: #fff;
   --bg-header-mobile: url('./assets/background/header.svg');
   --bg-about-me-mobile: url('./assets/background/about-me.svg');
   --bg-contact-form-mobile: url('./assets/background/contact-form.svg');
@@ -78,6 +79,31 @@ body {
   position: relative;
   font-family: 'Inter', sans-serif;
   margin: auto;
+}
+
+#popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100vh;
+  background: var(--glass);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#popup {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem 1rem;
+  background: var(--white);
+  border-radius: 1rem;
 }
 
 #theme-panel {

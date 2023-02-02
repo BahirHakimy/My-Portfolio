@@ -568,6 +568,13 @@ footer {
   margin: 0;
 }
 
+#error-message {
+  color: var(--gmail);
+  margin: 0;
+  font-size: 0.9rem;
+  display: none;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   #welcome {

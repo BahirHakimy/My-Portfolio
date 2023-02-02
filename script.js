@@ -9,6 +9,8 @@ const popupClose = document.getElementById('popup-close');
 const popupTitle = document.querySelector('.popup-title');
 const popupTags = document.getElementById('popup-tags');
 const popupDescription = document.querySelector('.popup-text');
+const errorMessage = document.getElementById('error-message');
+const form = document.querySelector('form');
 
 function setTheme(theme) {
   document.body.className = theme;
@@ -116,3 +118,16 @@ document.querySelectorAll('.project-btn').forEach((btn, index) => {
 });
 
 popupClose.onclick = () => hideModel();
+
+form.addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  const { email } = ev.target;
+  const lowerCase = email.value.toLowerCase();
+  if (lowerCase !== email.value) {
+    errorMessage.textContent = `Email is incorrect, Form not submitted. Try: ${lowerCase}`;
+    errorMessage.style.display = 'block';
+  } else {
+    errorMessage.style.display = 'none';
+    ev.target.submit();
+  }
+});

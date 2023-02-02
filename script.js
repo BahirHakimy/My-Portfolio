@@ -4,6 +4,8 @@ const icon = document.getElementById('hamburger-icon');
 const nav = document.querySelector('.desktop-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const logo = document.getElementById('logo');
+const errorMessage = document.getElementById('error-message');
+const form = document.querySelector('form');
 
 function setTheme(theme) {
   document.body.className = theme;
@@ -44,3 +46,16 @@ hamburger.onclick = () => {
     showMobileNav();
   }
 };
+
+form.addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  const { email } = ev.target;
+  const lowerCase = email.value.toLowerCase();
+  if (lowerCase !== email.value) {
+    errorMessage.textContent = `Email is incorrect, Form not submitted. Try: ${lowerCase}`;
+    errorMessage.style.display = 'block';
+  } else {
+    errorMessage.style.display = 'none';
+    ev.target.submit();
+  }
+});

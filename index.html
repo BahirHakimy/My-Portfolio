@@ -14,21 +14,31 @@
   <body class="theme1">
     <div id="popup-container">
       <div id="popup">
-        <img src="./assets/background/mobile-project.png" alt="project-image" />
-        <h2 class="heading text-secondary">Keeping track of hundreds of components</h2>
-        <div class="tags">
-          <ul class="languages">
-            <li class="language-tags">Ruby on rails</li>
-            <li class="language-tags">css</li>
-            <li class="language-tags">JavaScript</li>
-            <li class="language-tags">html</li>
-          </ul>
+        <button id="popup-close">
+          <img src="./assets/icons/close.svg" alt="close-button" />
+        </button>
+        <picture class="popup-image">
+          <source
+            srcset="./assets/background/desktop-project.png"
+            media="(min-width: 768px)"
+          />
+          <img
+            class="popup-image"
+            src="./assets/background/mobile-project.png"
+            alt="project-image"
+          />
+        </picture>
+        <h2 class="popup-title text-secondary"></h2>
+        <ul id="popup-tags" class="languages"></ul>
+        <p class="popup-text"></p>
+        <div id="popup-buttons-container">
+          <button class="popup-button">
+            See Live <img src="./assets/icons/githubWhite.svg" alt="icon" />
+          </button>
+          <button class="popup-button">
+            See Source <img src="./assets/icons/see-live.svg" alt="icon" />
+          </button>
         </div>
-        <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
-      </div>
-      <div>
-        <button>See Live</button>
-        <button>See Source</button>
       </div>
     </div>
     <div id="theme-panel" class="flex-center">
@@ -161,7 +171,7 @@
           <li class="language-tags">JavaScript</li>
           <li class="language-tags">html</li>
         </ul>
-        <button class="button">See Project</button>
+        <button class="button project-btn">See Project</button>
       </div>
       <div class="project-card flex-center">
         <div class="image-placeholder"></div>
@@ -172,7 +182,7 @@
           <li class="language-tags">JavaScript</li>
           <li class="language-tags">html</li>
         </ul>
-        <button class="button">See Project</button>
+        <button class="button project-btn">See Project</button>
       </div>
       <div class="project-card flex-center">
         <div class="image-placeholder"></div>
@@ -183,7 +193,7 @@
           <li class="language-tags">JavaScript</li>
           <li class="language-tags">html</li>
         </ul>
-        <button class="button">See Project</button>
+        <button class="button project-btn">See Project</button>
       </div>
       <div class="project-card flex-center">
         <div class="image-placeholder"></div>
@@ -194,7 +204,7 @@
           <li class="language-tags">JavaScript</li>
           <li class="language-tags">html</li>
         </ul>
-        <button class="button">See Project</button>
+        <button class="button project-btn">See Project</button>
       </div>
       <div class="project-card flex-center">
         <div class="image-placeholder"></div>
@@ -205,7 +215,7 @@
           <li class="language-tags">JavaScript</li>
           <li class="language-tags">html</li>
         </ul>
-        <button class="button">See Project</button>
+        <button class="button project-btn">See Project</button>
       </div>
       <div class="project-card flex-center">
         <div class="image-placeholder"></div>
@@ -216,7 +226,7 @@
           <li class="language-tags">JavaScript</li>
           <li class="language-tags">html</li>
         </ul>
-        <button class="button">See Project</button>
+        <button class="button project-btn">See Project</button>
       </div>
     </section>
     <section id="about-me">

@@ -86,24 +86,81 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  max-height: 100vh;
   background: var(--glass);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 100;
+  overflow-y: scroll;
 }
 
 #popup {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: center;
   align-items: center;
   margin: 1.25rem 1rem;
   background: var(--white);
   border-radius: 1rem;
+  padding: 1rem;
+}
+
+#popup-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / span 2;
+}
+
+.popup-title {
+  font-size: 2rem;
+  grid-area: 2 / span 2;
+}
+
+#popup-tags {
+  grid-area: 3 / span 2;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.popup-text {
+  grid-area: 4 / span 2;
+  font-size: 1rem;
+  color: var(--secondary);
+  font-weight: 400;
+}
+
+#popup-buttons-container {
+  grid-area: 5 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.popup-button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  border: none;
+  letter-spacing: 0.03rem;
+  transition: box-shadow 0.2s;
 }
 
 #theme-panel {
@@ -524,6 +581,27 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  #popup {
+    padding-top: 4rem;
+  }
+
+  #popup-close {
+    background-color: var(--glass);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .popup-title {
+    grid-area: 2 / span 1;
+  }
+
+  #popup-buttons-container {
+    grid-area: 2;
+    justify-content: flex-end;
+  }
+
   header {
     justify-content: center;
     position: relative;
@@ -619,6 +697,10 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #popup {
+    max-width: 90%;
+  }
+
   #recent-works {
     grid-template: auto repeat(2, 1fr) / repeat(3, 1fr);
   }
@@ -640,6 +722,10 @@ footer {
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 125%;
+  }
+
+  #popup {
+    max-width: 80%;
   }
 
   #about-me-intro {

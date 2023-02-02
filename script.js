@@ -5,6 +5,7 @@ const nav = document.querySelector('.desktop-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const logo = document.getElementById('logo');
 const errorMessage = document.getElementById('error-message');
+const form = document.querySelector('form');
 
 function setTheme(theme) {
   document.body.className = theme;
@@ -46,7 +47,7 @@ hamburger.onclick = () => {
   }
 };
 
-document.forms[0].addEventListener('submit', (ev) => {
+form.addEventListener('submit', (ev) => {
   ev.preventDefault();
   const { email } = ev.target;
   const lowerCase = email.value.toLowerCase();

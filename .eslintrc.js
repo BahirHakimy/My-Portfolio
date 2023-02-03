@@ -22,5 +22,6 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ['dist/', 'build/'],
+  ignorePatterns: ['dist/', 'build/', 'script.js', 'eslintrc.js'],
 };
+

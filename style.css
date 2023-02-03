@@ -9,25 +9,26 @@
 }
 
 :root {
-  --primary: #28865f;
-  --light-green: #60c095;
   --active: #008552;
-  --natural: #3a4a42;
-  --secondary: #172b4d;
-  --navy: #344563;
-  --white: #fff;
-  --light: #c5e9da;
-  --smoke: #ebf0ee;
   --dark: #28352f;
-  --gray: #505f79;
-  --light-gray: #dfe1e6;
-  --dim-gray: #6b778c;
   --dark-blue: #091e42;
+  --dim-gray: #6b778c;
   --facebook: #15a2fa;
+  --gmail: #ea4335;
+  --glass: #c1c7d0;
+  --gray: #505f79;
+  --light: #c5e9da;
+  --light-gray: #dfe1e6;
+  --light-green: #60c095;
+  --linkedin: #0077b5;
+  --natural: #3a4a42;
+  --navy: #344563;
+  --primary: #28865f;
+  --secondary: #172b4d;
+  --smoke: #ebf0ee;
   --twitter: #1d9bf0;
   --whatsapp: #27cc37;
-  --linkedin: #0077b5;
-  --gmail: #ea4335;
+  --white: #fff;
   --bg-header-mobile: url('./assets/background/header.svg');
   --bg-about-me-mobile: url('./assets/background/about-me.svg');
   --bg-contact-form-mobile: url('./assets/background/contact-form.svg');
@@ -78,6 +79,94 @@ body {
   position: relative;
   font-family: 'Inter', sans-serif;
   margin: auto;
+}
+
+#modal-container {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  max-height: 100%;
+  background: var(--glass);
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(0.75rem);
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+#modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem 1rem;
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  height: max-content;
+}
+
+#modal-close {
+  position: absolute;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+}
+
+#modal-close:hover {
+  background-color: var(--glass);
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / span 2;
+}
+
+.modal-title {
+  font-size: 2rem;
+  grid-area: 2 / span 2;
+}
+
+#modal-tags {
+  grid-area: 3 / span 2;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.modal-text {
+  grid-area: 4 / span 2;
+  font-size: 1rem;
+  color: var(--secondary);
+  font-weight: 400;
+}
+
+#modal-buttons-container {
+  grid-area: 5 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin: 0 0.1rem;
+  font-weight: 500;
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  border: none;
+  letter-spacing: 0.03rem;
+  transition: box-shadow 0.2s;
 }
 
 #theme-panel {
@@ -494,6 +583,11 @@ footer {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .model-button {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+
   #welcome {
     background-position: center;
   }
@@ -505,6 +599,31 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  #modal {
+    padding-top: 4rem;
+    margin: 2.25rem 2rem;
+  }
+
+  #modal-close {
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--glass);
+  }
+
+  .modal-title {
+    grid-area: 2 / span 1;
+  }
+
+  #modal-buttons-container {
+    grid-area: 2;
+    justify-content: flex-end;
+  }
+
+  .model-button {
+    font-size: 1.1rem;
+    gap: 1rem;
+  }
+
   header {
     justify-content: center;
     position: relative;
@@ -600,6 +719,11 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #modal {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+
   #recent-works {
     grid-template: auto repeat(2, 1fr) / repeat(3, 1fr);
   }
@@ -621,6 +745,10 @@ footer {
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 125%;
+  }
+
+  #modal {
+    max-width: 80%;
   }
 
   #about-me-intro {

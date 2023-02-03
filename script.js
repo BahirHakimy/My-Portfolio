@@ -74,8 +74,8 @@ const projects = [
       './assets/background/desktop-project.png',
       './assets/background/mobile-project.png',
     ],
-    sourceLink: '#',
-    demoLink: '#',
+    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
+    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -86,8 +86,8 @@ const projects = [
       './assets/background/desktop-project.png',
       './assets/background/mobile-project.png',
     ],
-    sourceLink: '#',
-    demoLink: '#',
+    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
+    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -98,8 +98,8 @@ const projects = [
       './assets/background/desktop-project.png',
       './assets/background/mobile-project.png',
     ],
-    sourceLink: '#',
-    demoLink: '#',
+    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
+    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -110,8 +110,8 @@ const projects = [
       './assets/background/desktop-project.png',
       './assets/background/mobile-project.png',
     ],
-    sourceLink: '#',
-    demoLink: '#',
+    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
+    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -122,8 +122,8 @@ const projects = [
       './assets/background/desktop-project.png',
       './assets/background/mobile-project.png',
     ],
-    sourceLink: '#',
-    demoLink: '#',
+    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
+    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -134,17 +134,13 @@ const projects = [
       './assets/background/desktop-project.png',
       './assets/background/mobile-project.png',
     ],
-    sourceLink: '#',
-    demoLink: '#',
+    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
+    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
   },
 ];
 
 function createModel(project) {
   const model = createElement('div', { id: 'modal' });
-  let tagList = '';
-  for (let i = 0; i < project.tags.length; i += 1) {
-    tagList += `<li class='language-tags'>${project.tags[i]}</li>`;
-  }
 
   model.innerHTML = `
     <button id='modal-close'>
@@ -163,7 +159,9 @@ function createModel(project) {
     </picture>
     <h2 class='modal-title text-secondary'>${project.name}</h2>
     <ul id='modal-tags' class='languages'>
-    ${tagList}</ul>
+    ${project.tags
+      .map((tag) => `<li class='language-tags'>${tag}</li>`)
+      .join('')}</ul>
     <p class='modal-text'>
      ${project.description}
     </p>

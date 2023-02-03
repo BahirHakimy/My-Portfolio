@@ -601,7 +601,7 @@ footer {
 @media only screen and (min-width: 768px) {
   #modal {
     padding-top: 4rem;
-    margin: 1.25rem auto;
+    margin: 2.25rem 2rem;
   }
 
   #modal-close {
@@ -721,6 +721,7 @@ footer {
 @media only screen and (min-width: 992px) {
   #modal {
     max-width: 90%;
+    margin: 3rem auto;
   }
 
   #recent-works {

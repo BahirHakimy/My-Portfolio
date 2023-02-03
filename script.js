@@ -142,7 +142,7 @@ const projects = [
 function createModel(project) {
   const model = createElement('div', { id: 'modal' });
   let tagList = '';
-  for (let i = 0; i < project.tags.length; i = i + 1) {
+  for (let i = 0; i < project.tags.length; i += 1) {
     tagList += `<li class='language-tags'>${project.tags[i]}</li>`;
   }
 

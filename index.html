@@ -12,35 +12,7 @@
     ></script>
   </head>
   <body class="theme1">
-    <div id="popup-container">
-      <div id="popup">
-        <button id="popup-close">
-          <img src="./assets/icons/close.svg" alt="close-button" />
-        </button>
-        <picture class="popup-image">
-          <source
-            srcset="./assets/background/desktop-project.png"
-            media="(min-width: 768px)"
-          />
-          <img
-            class="popup-image"
-            src="./assets/background/mobile-project.png"
-            alt="project-image"
-          />
-        </picture>
-        <h2 class="popup-title text-secondary"></h2>
-        <ul id="popup-tags" class="languages"></ul>
-        <p class="popup-text"></p>
-        <div id="popup-buttons-container">
-          <button class="popup-button">
-            See Live <img src="./assets/icons/githubWhite.svg" alt="icon" />
-          </button>
-          <button class="popup-button">
-            See Source <img src="./assets/icons/see-live.svg" alt="icon" />
-          </button>
-        </div>
-      </div>
-    </div>
+    <div id="modal-container"></div>
     <div id="theme-panel" class="flex-center">
       <button
         title="Select color-theme 1"
@@ -70,41 +42,268 @@
         <i class="fa-solid fa-chevron-up"></i
       ></a>
     </div>
-    <main>
-      <header id="header">
-        <a href="#" id="logo">Welcome</a>
-        <nav id="hamburger">
-          <i id="hamburger-icon" class="fa-solid fa-bars"></i>
-        </nav>
-        <nav class="desktop-nav">
-          <a href="#welcome" onclick="hideMobileNav()" class="nav-item"
-            >Portfolio</a
-          >
-          <a href="#about-me" onclick="hideMobileNav()" class="nav-item"
-            >About</a
-          >
-          <a href="#contact-form" onclick="hideMobileNav()" class="nav-item"
-            >Contact</a
-          >
-        </nav>
-      </header>
-      <section id="welcome">
-        <h1 id="welcome-heading" class="heading">
-          <span class="text-secondary" id="greeting-caption"
-            >Hey there. I’m Bahir.</span
-          >
-          <br />
-          <span class="text-primary"> I’m a software developer</span>
-        </h1>
-        <p class="description">
-          I can help you build a product , feature or website Look through some
-          of my work and experience! If you like what you see and have a project
-          you need coded, don’t hestiate to contact me.
-        </p>
+    <div id="container">
+      <main>
+        <header id="header">
+          <a href="#" id="logo">Welcome</a>
+          <nav id="hamburger">
+            <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+          </nav>
+          <nav class="desktop-nav">
+            <a href="#welcome" onclick="hideMobileNav()" class="nav-item"
+              >Portfolio</a
+            >
+            <a href="#about-me" onclick="hideMobileNav()" class="nav-item"
+              >About</a
+            >
+            <a href="#contact-form" onclick="hideMobileNav()" class="nav-item"
+              >Contact</a
+            >
+          </nav>
+        </header>
+        <section id="welcome">
+          <h1 id="welcome-heading" class="heading">
+            <span class="text-secondary" id="greeting-caption"
+              >Hey there. I’m Bahir.</span
+            >
+            <br />
+            <span class="text-primary"> I’m a software developer</span>
+          </h1>
+          <p class="description">
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don’t hestiate to contact me.
+          </p>
+          <ul class="social-icons flex-center">
+            <li class="social-icon">
+              <a
+                aria-label="facebook"
+                href="https://www.facebook.com/profile.php?id=100004886324671"
+                class="facebook"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a
+                aria-label="twitter"
+                href="https://twitter.com/bahir_hakimy"
+                class="twitter"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a
+                aria-label="linkedin"
+                href="https://www.linkedin.com/in/bahir-hakimy/"
+                class="linkedin"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a aria-label="whatsapp" href="tel:+93744570916" class="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a
+                aria-label="gmail"
+                href="mailto:bahirhakimy2020@gmail.com"
+                class="gmail"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+          <div id="scroll-bottom">
+            <a
+              href="#recent-works"
+              class="icon flex-center"
+              aria-label="scroll-to-works"
+            >
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </div>
+        </section>
+      </main>
+      <section id="recent-works">
+        <div id="group">
+          <h2 id="works-heading" class="heading text-secondary">
+            My Recent Works
+          </h2>
+          <div id="indicator"></div>
+        </div>
+        <div class="project-card flex-center">
+          <div class="image-placeholder"></div>
+          <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
+          <ul class="languages">
+            <li class="language-tags">Ruby on rails</li>
+            <li class="language-tags">css</li>
+            <li class="language-tags">JavaScript</li>
+            <li class="language-tags">html</li>
+          </ul>
+          <button class="button project-btn">See Project</button>
+        </div>
+        <div class="project-card flex-center">
+          <div class="image-placeholder"></div>
+          <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
+          <ul class="languages">
+            <li class="language-tags">Ruby on rails</li>
+            <li class="language-tags">css</li>
+            <li class="language-tags">JavaScript</li>
+            <li class="language-tags">html</li>
+          </ul>
+          <button class="button project-btn">See Project</button>
+        </div>
+        <div class="project-card flex-center">
+          <div class="image-placeholder"></div>
+          <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
+          <ul class="languages">
+            <li class="language-tags">Ruby on rails</li>
+            <li class="language-tags">css</li>
+            <li class="language-tags">JavaScript</li>
+            <li class="language-tags">html</li>
+          </ul>
+          <button class="button project-btn">See Project</button>
+        </div>
+        <div class="project-card flex-center">
+          <div class="image-placeholder"></div>
+          <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
+          <ul class="languages">
+            <li class="language-tags">Ruby on rails</li>
+            <li class="language-tags">css</li>
+            <li class="language-tags">JavaScript</li>
+            <li class="language-tags">html</li>
+          </ul>
+          <button class="button project-btn">See Project</button>
+        </div>
+        <div class="project-card flex-center">
+          <div class="image-placeholder"></div>
+          <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
+          <ul class="languages">
+            <li class="language-tags">Ruby on rails</li>
+            <li class="language-tags">css</li>
+            <li class="language-tags">JavaScript</li>
+            <li class="language-tags">html</li>
+          </ul>
+          <button class="button project-btn">See Project</button>
+        </div>
+        <div class="project-card flex-center">
+          <div class="image-placeholder"></div>
+          <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
+          <ul class="languages">
+            <li class="language-tags">Ruby on rails</li>
+            <li class="language-tags">css</li>
+            <li class="language-tags">JavaScript</li>
+            <li class="language-tags">html</li>
+          </ul>
+          <button class="button project-btn">See Project</button>
+        </div>
+      </section>
+      <section id="about-me">
+        <div id="about-me-intro" class="flex-center">
+          <h2 id="about-heading" class="heading text-secondary">About Me</h2>
+          <p class="description">
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don’t hestiate to contact me.
+          </p>
+          <button class="button">Get My Resume</button>
+        </div>
+        <div class="about-me-card">
+          <div class="icon-wrapper flex-center">
+            <img src="./assets/icons/Globe.svg" alt="globe icon" />
+          </div>
+          <h2 class="skill-title">Languages</h2>
+          <ul class="skill-list flex-center">
+            <li class="skill-tag">JavaScript</li>
+            <li class="skill-tag">Ruby</li>
+            <li class="skill-tag">Html</li>
+            <li class="skill-tag">CSS</li>
+          </ul>
+        </div>
+        <div class="about-me-card">
+          <div class="icon-wrapper flex-center">
+            <img src="./assets/icons/Boxes.svg" alt="boxes icon" />
+          </div>
+          <h2 class="skill-title">Frameworks</h2>
+          <ul class="skill-list flex-center">
+            <li class="skill-tag">Bootstrap</li>
+            <li class="skill-tag">Ruby on rails</li>
+            <li class="skill-tag">Rspec</li>
+            <li class="skill-tag">Capybara</li>
+            <li class="skill-tag">Selenium</li>
+          </ul>
+        </div>
+        <div class="about-me-card">
+          <div class="icon-wrapper flex-center">
+            <img src="./assets/icons/Lightinings.svg" alt="lightnings icon" />
+          </div>
+          <h2 class="skill-title">Skills</h2>
+          <ul class="skill-list flex-center">
+            <li class="skill-tag">Codekit</li>
+            <li class="skill-tag">GitHub</li>
+            <li class="skill-tag">Codepen</li>
+            <li class="skill-tag">Gitlab</li>
+            <li class="skill-tag">Terminal</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="flex-center">
+        <h3 id="contact-form-caption" class="heading text-secondary">
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </h3>
+        <form
+          action="https://formspree.io/f/mrgvbkea"
+          method="post"
+          id="contact-form"
+          class="flex-center"
+        >
+          <label for="full-name" class="hidden"></label>
+          <input
+            id="full-name"
+            type="text"
+            maxlength="30"
+            required
+            class="contact-input"
+            name="full-name"
+            placeholder="Full Name"
+          />
+          <label for="email" class="hidden"></label>
+          <input
+            id="email"
+            type="email"
+            class="contact-input"
+            required
+            name="email-address"
+            placeholder="Email address"
+          />
+          <label for="message" class="hidden"></label>
+          <textarea
+            placeholder="Enter text here"
+            name="message"
+            maxlength="500"
+            required
+            id="message"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <p id="error-message">
+            Email is not correct please try abc@email.com
+          </p>
+          <button id="submit-button" class="button" type="submit">
+            Get in touch
+          </button>
+        </form>
+      </section>
+      <footer class="flex-center">
         <ul class="social-icons flex-center">
           <li class="social-icon">
             <a
-              aria-label="facebook"
+              aria-label="facebook link"
               href="https://www.facebook.com/profile.php?id=100004886324671"
               class="facebook"
             >
@@ -113,7 +312,7 @@
           </li>
           <li class="social-icon">
             <a
-              aria-label="twitter"
+              aria-label="twitter link"
               href="https://twitter.com/bahir_hakimy"
               class="twitter"
             >
@@ -122,7 +321,7 @@
           </li>
           <li class="social-icon">
             <a
-              aria-label="linkedin"
+              aria-label="linkedin link"
               href="https://www.linkedin.com/in/bahir-hakimy/"
               class="linkedin"
             >
@@ -130,13 +329,17 @@
             </a>
           </li>
           <li class="social-icon">
-            <a aria-label="whatsapp" href="tel:+93744570916" class="whatsapp">
+            <a
+              aria-label="whatsapp link"
+              href="tel:+93744570916"
+              class="whatsapp"
+            >
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </li>
           <li class="social-icon">
             <a
-              aria-label="gmail"
+              aria-label="gmail link"
               href="mailto:bahirhakimy2020@gmail.com"
               class="gmail"
             >
@@ -144,238 +347,11 @@
             </a>
           </li>
         </ul>
-        <div id="scroll-bottom">
-          <a
-            href="#recent-works"
-            class="icon flex-center"
-            aria-label="scroll-to-works"
-          >
-            <i class="fa-solid fa-chevron-down"></i>
-          </a>
-        </div>
-      </section>
-    </main>
-    <section id="recent-works">
-      <div id="group">
-        <h2 id="works-heading" class="heading text-secondary">
-          My Recent Works
-        </h2>
-        <div id="indicator"></div>
-      </div>
-      <div class="project-card flex-center">
-        <div class="image-placeholder"></div>
-        <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
-        <ul class="languages">
-          <li class="language-tags">Ruby on rails</li>
-          <li class="language-tags">css</li>
-          <li class="language-tags">JavaScript</li>
-          <li class="language-tags">html</li>
-        </ul>
-        <button class="button project-btn">See Project</button>
-      </div>
-      <div class="project-card flex-center">
-        <div class="image-placeholder"></div>
-        <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
-        <ul class="languages">
-          <li class="language-tags">Ruby on rails</li>
-          <li class="language-tags">css</li>
-          <li class="language-tags">JavaScript</li>
-          <li class="language-tags">html</li>
-        </ul>
-        <button class="button project-btn">See Project</button>
-      </div>
-      <div class="project-card flex-center">
-        <div class="image-placeholder"></div>
-        <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
-        <ul class="languages">
-          <li class="language-tags">Ruby on rails</li>
-          <li class="language-tags">css</li>
-          <li class="language-tags">JavaScript</li>
-          <li class="language-tags">html</li>
-        </ul>
-        <button class="button project-btn">See Project</button>
-      </div>
-      <div class="project-card flex-center">
-        <div class="image-placeholder"></div>
-        <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
-        <ul class="languages">
-          <li class="language-tags">Ruby on rails</li>
-          <li class="language-tags">css</li>
-          <li class="language-tags">JavaScript</li>
-          <li class="language-tags">html</li>
-        </ul>
-        <button class="button project-btn">See Project</button>
-      </div>
-      <div class="project-card flex-center">
-        <div class="image-placeholder"></div>
-        <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
-        <ul class="languages">
-          <li class="language-tags">Ruby on rails</li>
-          <li class="language-tags">css</li>
-          <li class="language-tags">JavaScript</li>
-          <li class="language-tags">html</li>
-        </ul>
-        <button class="button project-btn">See Project</button>
-      </div>
-      <div class="project-card flex-center">
-        <div class="image-placeholder"></div>
-        <h2 class="project-title">Multi-Post Stories Gain+Glory</h2>
-        <ul class="languages">
-          <li class="language-tags">Ruby on rails</li>
-          <li class="language-tags">css</li>
-          <li class="language-tags">JavaScript</li>
-          <li class="language-tags">html</li>
-        </ul>
-        <button class="button project-btn">See Project</button>
-      </div>
-    </section>
-    <section id="about-me">
-      <div id="about-me-intro" class="flex-center">
-        <h2 id="about-heading" class="heading text-secondary">About Me</h2>
-        <p class="description">
-          I can help you build a product , feature or website Look through some
-          of my work and experience! If you like what you see and have a project
-          you need coded, don’t hestiate to contact me.
-        </p>
-        <button class="button">Get My Resume</button>
-      </div>
-      <div class="about-me-card">
-        <div class="icon-wrapper flex-center">
-          <img src="./assets/icons/Globe.svg" alt="globe icon" />
-        </div>
-        <h2 class="skill-title">Languages</h2>
-        <ul class="skill-list flex-center">
-          <li class="skill-tag">JavaScript</li>
-          <li class="skill-tag">Ruby</li>
-          <li class="skill-tag">Html</li>
-          <li class="skill-tag">CSS</li>
-        </ul>
-      </div>
-      <div class="about-me-card">
-        <div class="icon-wrapper flex-center">
-          <img src="./assets/icons/Boxes.svg" alt="boxes icon" />
-        </div>
-        <h2 class="skill-title">Frameworks</h2>
-        <ul class="skill-list flex-center">
-          <li class="skill-tag">Bootstrap</li>
-          <li class="skill-tag">Ruby on rails</li>
-          <li class="skill-tag">Rspec</li>
-          <li class="skill-tag">Capybara</li>
-          <li class="skill-tag">Selenium</li>
-        </ul>
-      </div>
-      <div class="about-me-card">
-        <div class="icon-wrapper flex-center">
-          <img src="./assets/icons/Lightinings.svg" alt="lightnings icon" />
-        </div>
-        <h2 class="skill-title">Skills</h2>
-        <ul class="skill-list flex-center">
-          <li class="skill-tag">Codekit</li>
-          <li class="skill-tag">GitHub</li>
-          <li class="skill-tag">Codepen</li>
-          <li class="skill-tag">Gitlab</li>
-          <li class="skill-tag">Terminal</li>
-        </ul>
-      </div>
-    </section>
-    <section id="contact" class="flex-center">
-      <h3 id="contact-form-caption" class="heading text-secondary">
-        I'm always interested in hearing about new projects, so if you'd like to
-        chat please get in touch.
-      </h3>
-      <form
-        action="https://formspree.io/f/mrgvbkea"
-        method="post"
-        id="contact-form"
-        class="flex-center"
-      >
-        <label for="full-name" class="hidden"></label>
-        <input
-          id="full-name"
-          type="text"
-          maxlength="30"
-          required
-          class="contact-input"
-          name="full-name"
-          placeholder="Full Name"
-        />
-        <label for="email" class="hidden"></label>
-        <input
-          id="email"
-          type="email"
-          class="contact-input"
-          required
-          name="email-address"
-          placeholder="Email address"
-        />
-        <label for="message" class="hidden"></label>
-        <textarea
-          placeholder="Enter text here"
-          name="message"
-          maxlength="500"
-          required
-          id="message"
-          cols="30"
-          rows="5"
-        ></textarea>
-        <p id="error-message">Email is not correct please try abc@email.com</p>
-        <button id="submit-button" class="button" type="submit">
-          Get in touch
-        </button>
-      </form>
-    </section>
-    <footer class="flex-center">
-      <ul class="social-icons flex-center">
-        <li class="social-icon">
-          <a
-            aria-label="facebook link"
-            href="https://www.facebook.com/profile.php?id=100004886324671"
-            class="facebook"
-          >
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-        <li class="social-icon">
-          <a
-            aria-label="twitter link"
-            href="https://twitter.com/bahir_hakimy"
-            class="twitter"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </li>
-        <li class="social-icon">
-          <a
-            aria-label="linkedin link"
-            href="https://www.linkedin.com/in/bahir-hakimy/"
-            class="linkedin"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="social-icon">
-          <a
-            aria-label="whatsapp link"
-            href="tel:+93744570916"
-            class="whatsapp"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-        </li>
-        <li class="social-icon">
-          <a
-            aria-label="gmail link"
-            href="mailto:bahirhakimy2020@gmail.com"
-            class="gmail"
-          >
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </li>
-      </ul>
-      <a class="footer-email" href="mailto:bahirhakimy2020@gmail.com"
-        >bahirhakimy2020@gmail.com</a
-      >
-    </footer>
+        <a class="footer-email" href="mailto:bahirhakimy2020@gmail.com"
+          >bahirhakimy2020@gmail.com</a
+        >
+      </footer>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

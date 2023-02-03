@@ -81,20 +81,20 @@ body {
   margin: auto;
 }
 
-#popup-container {
-  position: absolute;
+#modal-container {
+  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  overflow-y: scroll;
+  height: 100vh;
+  max-height: 100%;
   background: var(--glass);
-  display: none;
-  justify-content: center;
-  align-items: center;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(0.75rem);
   z-index: 100;
   overflow-y: scroll;
 }
 
-#popup {
+#modal {
   position: relative;
   display: grid;
   grid-template-columns: auto auto;
@@ -104,41 +104,48 @@ body {
   background: var(--white);
   border-radius: 1rem;
   padding: 1rem;
+  height: max-content;
 }
 
-#popup-close {
+#modal-close {
   position: absolute;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   top: 2rem;
   right: 2rem;
-  background-color: transparent;
   border: none;
 }
 
-.popup-image {
+#modal-close:hover {
+  background-color: var(--glass);
+}
+
+.modal-image {
   width: 100%;
   height: auto;
   grid-area: 1 / span 2;
 }
 
-.popup-title {
+.modal-title {
   font-size: 2rem;
   grid-area: 2 / span 2;
 }
 
-#popup-tags {
+#modal-tags {
   grid-area: 3 / span 2;
   justify-content: flex-start;
   gap: 1rem;
 }
 
-.popup-text {
+.modal-text {
   grid-area: 4 / span 2;
   font-size: 1rem;
   color: var(--secondary);
   font-weight: 400;
 }
 
-#popup-buttons-container {
+#modal-buttons-container {
   grid-area: 5 / span 2;
   display: flex;
   justify-content: center;
@@ -147,12 +154,12 @@ body {
   width: 100%;
 }
 
-.popup-button {
+.modal-button {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  font-size: 1.1rem;
-  margin: 0 0.5rem;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin: 0 0.1rem;
   font-weight: 500;
   color: var(--white);
   padding: 0.75rem;
@@ -577,6 +584,11 @@ footer {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .model-button {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+
   #welcome {
     background-position: center;
   }
@@ -588,25 +600,29 @@ footer {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  #popup {
+  #modal {
     padding-top: 4rem;
+    margin: 1.25rem auto;
   }
 
-  #popup-close {
-    background-color: var(--glass);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+  #modal-close {
     top: 1rem;
     right: 1rem;
+    background-color: var(--glass);
   }
 
-  .popup-title {
+  .modal-title {
     grid-area: 2 / span 1;
   }
 
-  #popup-buttons-container {
+  #modal-buttons-container {
     grid-area: 2;
     justify-content: flex-end;
+  }
+
+  .model-button {
+    font-size: 1.1rem;
+    gap: 1rem;
   }
 
   header {
@@ -704,7 +720,7 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  #popup {
+  #modal {
     max-width: 90%;
   }
 
@@ -731,7 +747,7 @@ footer {
     font-size: 125%;
   }
 
-  #popup {
+  #modal {
     max-width: 80%;
   }
 

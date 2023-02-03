@@ -1,16 +1,33 @@
 const header = document.getElementById('header');
 const hamburger = document.getElementById('hamburger');
 const icon = document.getElementById('hamburger-icon');
-const nav = document.querySelector('.desktop-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const logo = document.getElementById('logo');
-const popupContainer = document.getElementById('popup-container');
-const popupClose = document.getElementById('popup-close');
-const popupTitle = document.querySelector('.popup-title');
-const popupTags = document.getElementById('popup-tags');
-const popupDescription = document.querySelector('.popup-text');
+const modalContainer = document.getElementById('modal-container');
+const modalTags = document.getElementById('modal-tags');
 const errorMessage = document.getElementById('error-message');
-const form = document.querySelector('form');
+const nav = $('.desktop-nav');
+const modalTitle = $('.modal-title');
+const modalDescription = $('.modal-text');
+const form = $('form');
+
+//? Helper Functions
+function $(query) {
+  return document.querySelector(query);
+}
+
+function createElement(tagname = 'div', attrs = {}) {
+  const elem = document.createElement(tagname);
+  Object.keys(attrs).forEach((key) => {
+    if (['class', 'id'].includes(key)) {
+      elem.setAttribute(key, attrs[key]);
+    } else {
+      elem[key] = attrs[key];
+    }
+  });
+  return elem;
+}
+//? End Helper Functions
 
 function setTheme(theme) {
   document.body.className = theme;
@@ -56,59 +73,127 @@ const projects = [
   {
     name: 'Multi-Post Stories Gain+Glory',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
     tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    images: [
+      './assets/background/desktop-project.png',
+      './assets/background/mobile-project.png',
+    ],
+    sourceLink: '#',
+    demoLink: '#',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
     tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    images: [
+      './assets/background/desktop-project.png',
+      './assets/background/mobile-project.png',
+    ],
+    sourceLink: '#',
+    demoLink: '#',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
     tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    images: [
+      './assets/background/desktop-project.png',
+      './assets/background/mobile-project.png',
+    ],
+    sourceLink: '#',
+    demoLink: '#',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
     tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    images: [
+      './assets/background/desktop-project.png',
+      './assets/background/mobile-project.png',
+    ],
+    sourceLink: '#',
+    demoLink: '#',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
     tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    images: [
+      './assets/background/desktop-project.png',
+      './assets/background/mobile-project.png',
+    ],
+    sourceLink: '#',
+    demoLink: '#',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
     tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+    images: [
+      './assets/background/desktop-project.png',
+      './assets/background/mobile-project.png',
+    ],
+    sourceLink: '#',
+    demoLink: '#',
   },
 ];
 
+function createModel(project) {
+  const model = createElement('div', { id: 'modal' });
+  let tagList = ``;
+  for (let tagElement of project.tags) {
+    tagList += `<li class='language-tags'>${tagElement}</li>`;
+  }
+  model.innerHTML = `
+    <button id="modal-close">
+      <img src="./assets/icons/close.svg" alt="close-button" />
+    </button>
+    <picture class="modal-image">
+      <source
+        srcset="${project.images[0]}"
+        media="(min-width: 768px)"
+      />
+      <img
+        class="modal-image"
+        src="${project.images[1]}"
+        alt="project-image"
+      />
+    </picture>
+    <h2 class="modal-title text-secondary">${project.name}</h2>
+    <ul id="modal-tags" class="languages">
+    ${tagList}</ul>
+    <p class="modal-text">
+     ${project.description}
+    </p>
+    <div id="modal-buttons-container">
+      <a href="${project.sourceLink}" class="modal-button">
+        See Live <img src="./assets/icons/githubWhite.svg" alt="icon" />
+      </a>
+      <a href="${project.demoLink}" class="modal-button">
+        See Source <img src="./assets/icons/see-live.svg" alt="icon" />
+      </a>
+    </div>`;
+  return model;
+}
+
 function showModel(index = 0) {
   const project = projects[index];
-  popupTitle.textContent = project.name;
-  popupDescription.textContent = project.description;
-  project.tags.forEach((tag) => {
-    const item = document.createElement('li');
-    item.classList.add('language-tags');
-    item.textContent = tag;
-    popupTags.appendChild(item);
-  });
-  window.scrollTo(0, 0);
-  popupContainer.style.display = 'flex';
+  modalContainer.append(createModel(project));
+  modalContainer.style.display = 'flex';
+  document.getElementById('modal-close').onclick = () => hideModel();
+  $('#container').style.overflow = 'hidden';
 }
 
 function hideModel() {
-  popupContainer.style.display = 'none';
-  document.body.style.maxHeight = 'auto';
-  document.body.style.overflow = 'auto';
+  modalContainer.style.display = 'none';
+  modalContainer.innerHTML = ``;
+  $('#container').style.overflow = 'auto';
 }
 
 document.querySelectorAll('.project-btn').forEach((btn, index) => {
@@ -116,8 +201,6 @@ document.querySelectorAll('.project-btn').forEach((btn, index) => {
     showModel(index);
   };
 });
-
-popupClose.onclick = () => hideModel();
 
 form.addEventListener('submit', (ev) => {
   ev.preventDefault();

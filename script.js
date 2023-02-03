@@ -1,17 +1,3 @@
-const header = document.getElementById('header');
-const hamburger = document.getElementById('hamburger');
-const icon = document.getElementById('hamburger-icon');
-const navItems = document.querySelectorAll('.nav-item');
-const logo = document.getElementById('logo');
-const modalContainer = document.getElementById('modal-container');
-const modalTags = document.getElementById('modal-tags');
-const errorMessage = document.getElementById('error-message');
-const nav = $('.desktop-nav');
-const modalTitle = $('.modal-title');
-const modalDescription = $('.modal-text');
-const form = $('form');
-
-//? Helper Functions
 function $(query) {
   return document.querySelector(query);
 }
@@ -27,7 +13,17 @@ function createElement(tagname = 'div', attrs = {}) {
   });
   return elem;
 }
-//? End Helper Functions
+
+const header = document.getElementById('header');
+const hamburger = document.getElementById('hamburger');
+const icon = document.getElementById('hamburger-icon');
+const navItems = document.querySelectorAll('.nav-item');
+const logo = document.getElementById('logo');
+const modalContainer = document.getElementById('modal-container');
+const errorMessage = document.getElementById('error-message');
+const nav = $('.desktop-nav');
+const modalTitle = $('.modal-title');
+const form = $('form');
 
 function setTheme(theme) {
   document.body.className = theme;
@@ -147,39 +143,46 @@ const projects = [
 function createModel(project) {
   const model = createElement('div', { id: 'modal' });
   let tagList = ``;
-  for (let tagElement of project.tags) {
-    tagList += `<li class='language-tags'>${tagElement}</li>`;
+  for (let i = 0; i < project.tags.length; i++) {
+    tagList += `<li class='language-tags'>${project.tags[i]}</li>`;
   }
+
   model.innerHTML = `
-    <button id="modal-close">
-      <img src="./assets/icons/close.svg" alt="close-button" />
+    <button id='modal-close'>
+      <img src='./assets/icons/close.svg' alt='close-button' />
     </button>
-    <picture class="modal-image">
+    <picture class='modal-image'>
       <source
-        srcset="${project.images[0]}"
-        media="(min-width: 768px)"
+        srcset='${project.images[0]}'
+        media='(min-width: 768px)'
       />
       <img
-        class="modal-image"
-        src="${project.images[1]}"
-        alt="project-image"
+        class='modal-image'
+        src='${project.images[1]}'
+        alt='project-image'
       />
     </picture>
-    <h2 class="modal-title text-secondary">${project.name}</h2>
-    <ul id="modal-tags" class="languages">
+    <h2 class='modal-title text-secondary'>${project.name}</h2>
+    <ul id='modal-tags' class='languages'>
     ${tagList}</ul>
-    <p class="modal-text">
+    <p class='modal-text'>
      ${project.description}
     </p>
-    <div id="modal-buttons-container">
-      <a href="${project.sourceLink}" class="modal-button">
-        See Live <img src="./assets/icons/githubWhite.svg" alt="icon" />
+    <div id='modal-buttons-container'>
+      <a href='${project.sourceLink}' class='modal-button'>
+        See Live <img src='./assets/icons/githubWhite.svg' alt='icon' />
       </a>
-      <a href="${project.demoLink}" class="modal-button">
-        See Source <img src="./assets/icons/see-live.svg" alt="icon" />
+      <a href='${project.demoLink}' class='modal-button'>
+        See Source <img src='./assets/icons/see-live.svg' alt='icon' />
       </a>
     </div>`;
   return model;
+}
+
+function hideModel() {
+  modalContainer.style.display = 'none';
+  modalContainer.innerHTML = ``;
+  $('#container').style.overflow = 'auto';
 }
 
 function showModel(index = 0) {
@@ -188,12 +191,6 @@ function showModel(index = 0) {
   modalContainer.style.display = 'flex';
   document.getElementById('modal-close').onclick = () => hideModel();
   $('#container').style.overflow = 'hidden';
-}
-
-function hideModel() {
-  modalContainer.style.display = 'none';
-  modalContainer.innerHTML = ``;
-  $('#container').style.overflow = 'auto';
 }
 
 document.querySelectorAll('.project-btn').forEach((btn, index) => {

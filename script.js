@@ -160,8 +160,8 @@ function createModel(project) {
     <h2 class='modal-title text-secondary'>${project.name}</h2>
     <ul id='modal-tags' class='languages'>
     ${project.tags
-      .map((tag) => `<li class='language-tags'>${tag}</li>`)
-      .join('')}</ul>
+    .map((tag) => `<li class='language-tags'>${tag}</li>`)
+    .join('')}</ul>
     <p class='modal-text'>
      ${project.description}
     </p>

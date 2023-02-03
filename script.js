@@ -22,7 +22,6 @@ const logo = document.getElementById('logo');
 const modalContainer = document.getElementById('modal-container');
 const errorMessage = document.getElementById('error-message');
 const nav = $('.desktop-nav');
-const modalTitle = $('.modal-title');
 const form = $('form');
 
 function setTheme(theme) {
@@ -142,8 +141,8 @@ const projects = [
 
 function createModel(project) {
   const model = createElement('div', { id: 'modal' });
-  let tagList = ``;
-  for (let i = 0; i < project.tags.length; i++) {
+  let tagList = '';
+  for (let i = 0; i < project.tags.length; i = i + 1) {
     tagList += `<li class='language-tags'>${project.tags[i]}</li>`;
   }
 
@@ -181,7 +180,7 @@ function createModel(project) {
 
 function hideModel() {
   modalContainer.style.display = 'none';
-  modalContainer.innerHTML = ``;
+  modalContainer.innerHTML = '';
   $('#container').style.overflow = 'auto';
 }
 

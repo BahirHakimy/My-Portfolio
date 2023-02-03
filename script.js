@@ -166,11 +166,11 @@ function createModel(project) {
      ${project.description}
     </p>
     <div id='modal-buttons-container'>
-      <a href='${project.sourceLink}' class='modal-button'>
-        See Live <img src='./assets/icons/githubWhite.svg' alt='icon' />
-      </a>
       <a href='${project.demoLink}' class='modal-button'>
-        See Source <img src='./assets/icons/see-live.svg' alt='icon' />
+        See Live <img src='./assets/icons/see-live.svg' alt='icon' />
+      </a>
+      <a href='${project.sourceLink}' class='modal-button'>
+        See Source <img src='./assets/icons/githubWhite.svg' alt='icon' />
       </a>
     </div>`;
   return model;

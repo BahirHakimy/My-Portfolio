@@ -186,7 +186,7 @@ function showModel(index = 0) {
   const project = projects[index];
   modalContainer.append(createModel(project));
   modalContainer.style.display = 'flex';
-  document.getElementById('modal-close').onclick = hideModel();
+  document.getElementById('modal-close').onclick = hideModel;
   $('#container').style.overflow = 'hidden';
 }
 

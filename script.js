@@ -66,16 +66,16 @@ hamburger.onclick = () => {
 
 const projects = [
   {
-    name: 'Multi-Post Stories Gain+Glory',
+    name: 'Doosti social app',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
-    tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      'Doosti is a social app where users can send and receive private or group messages, find friends, send and receive friend requests, send or recieve files voice messages, emojis and more. It also has a light and a dark them. users can also serach for other users and see their profiles',
+    tags: ['React js', 'CSS', 'Emotion', 'HTML'],
     images: [
-      './assets/background/desktop-project.png',
-      './assets/background/mobile-project.png',
+      './assets/images/doosti-desktop.png',
+      './assets/images/doosti-desktop.png',
     ],
-    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
-    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
+    sourceLink: 'https://github.com/BahirHakimy/DoostiApp',
+    demoLink: 'https://doostiapp.onrender.com/',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -160,8 +160,8 @@ function createModel(project) {
     <h2 class='modal-title text-secondary'>${project.name}</h2>
     <ul id='modal-tags' class='languages'>
     ${project.tags
-    .map((tag) => `<li class='language-tags'>${tag}</li>`)
-    .join('')}</ul>
+      .map((tag) => `<li class='language-tags'>${tag}</li>`)
+      .join('')}</ul>
     <p class='modal-text'>
      ${project.description}
     </p>

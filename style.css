@@ -405,8 +405,9 @@ a {
   flex-direction: column;
   border-radius: 0.5rem;
   overflow: hidden;
+  margin: auto 0.1rem;
   border: 2px solid var(--smoke);
-  width: 20.5rem;
+  width: 20rem;
 }
 
 .image-placeholder {

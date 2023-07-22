@@ -148,12 +148,12 @@ function createModel(project) {
     </button>
     <picture class='modal-image'>
       <source
-        srcset='${project.images[0]}'
+        srcset='${project.images}'
         media='(min-width: 768px)'
       />
       <img
         class='modal-image'
-        src='${project.images[1]}'
+        src='${project.images}'
         alt='project-image'
       />
     </picture>
@@ -186,7 +186,7 @@ function showModel(index = 0) {
   const project = projects[index];
   modalContainer.append(createModel(project));
   modalContainer.style.display = 'flex';
-  document.getElementById('modal-close').onclick = () => hideModel();
+  document.getElementById('modal-close').onclick = hideModel;
   $('#container').style.overflow = 'hidden';
 }
 
@@ -199,7 +199,7 @@ document.querySelectorAll('.project-btn').forEach((btn, index) => {
 form.addEventListener('submit', (ev) => {
   ev.preventDefault();
   const { email } = ev.target;
-  const lowerCase = email.value.toLowerCase();
+  const lowerCase = email.value.toLowerCase;
   if (lowerCase !== email.value) {
     errorMessage.textContent = `Email is incorrect, Form not submitted. Try: ${lowerCase}`;
     errorMessage.style.display = 'block';

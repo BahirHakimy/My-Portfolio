@@ -66,10 +66,46 @@ hamburger.onclick = () => {
 
 const projects = [
   {
+    name: 'Rent-a-car (Car reservations)',
+    description:
+      "A beautifull web app created using Ruby on Rails, React js, TailwindCSS and PostgreSQL where users can rent cars. It has a beautifull and responsive UI and also ability to add new cars or remove existent one's",
+    tags: [
+      'Ruby on rails',
+      'React js',
+      'Redux js',
+      'TailwindCSS',
+      'PostgreSQL',
+    ],
+    images: [
+      './assets/images/rent-a-car-desktop.png',
+      './assets/images/rent-a-car-mobile.png',
+    ],
+    sourceLink: 'https://github.com/BahirHakimy/rent-a-car',
+    demoLink: 'https://rent-a-car-lmhu.onrender.com/',
+  },
+  {
+    name: 'The Sky (Weather App)',
+    description:
+      'A beautifully made weather app that shows the weather condition based on the users location, it uses Open Weather api to fetch weather data.',
+    tags: ['React js', 'TailwindCSS', 'Redux js', 'OpenWeather API'],
+    images: [
+      './assets/images/the-sky-desktop.png',
+      './assets/images/the-sky-mobile.png',
+    ],
+    sourceLink: 'https://github.com/BahirHakimy/the-sky',
+    demoLink: 'https://the-sky.onrender.com/',
+  },
+  {
     name: 'Doosti social app',
     description:
       'Doosti is a social app where users can send and receive private or group messages, find friends, send and receive friend requests, send or recieve files voice messages, emojis and more. It also has a light and a dark them. users can also serach for other users and see their profiles',
-    tags: ['React js', 'CSS', 'Emotion', 'HTML'],
+    tags: [
+      'React js',
+      'Django',
+      'Django RestFramework',
+      'StyledComponents',
+      'EmotionCSS',
+    ],
     images: [
       './assets/images/doosti-desktop.png',
       './assets/images/doosti-desktop.png',
@@ -78,64 +114,40 @@ const projects = [
     demoLink: 'https://doostiapp.onrender.com/',
   },
   {
-    name: 'Multi-Post Stories Gain+Glory',
+    name: 'NASAverse (Portraits of the universe)',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
-    tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      'A beautiful website to surf through exciting pictures of the universe. Built with: (Javascript, Fetch API, HTML, CSS, Nasa Open API)',
+    tags: ['Javascript', 'HTML', 'CSS', 'NASA Open API'],
     images: [
-      './assets/background/desktop-project.png',
-      './assets/background/mobile-project.png',
+      './assets/images/nasaverse-desktop.png',
+      './assets/images/nasaverse-desktop.png',
     ],
-    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
-    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
+    sourceLink: 'https://github.com/jaimevillegas/Module-2-Capstone-Project/',
+    demoLink: 'https://jaimevillegas.github.io/Module-2-Capstone-Project/',
   },
   {
-    name: 'Multi-Post Stories Gain+Glory',
+    name: 'TODO List, Task Management App',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
-    tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      'A minimal yet beautiful Todo app created by Javascript based on glass-morphism design patterns, its features include creating new todos, editing and deleting them, and reordering with dragging.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
     images: [
-      './assets/background/desktop-project.png',
-      './assets/background/mobile-project.png',
+      './assets/images/todo-desktop.png',
+      './assets/images/todo-mobile.png',
     ],
-    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
-    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
+    sourceLink: 'https://github.com/BahirHakimy/todo-list',
+    demoLink: 'https://bahirhakimy.github.io/ToDo-List/',
   },
   {
-    name: 'Multi-Post Stories Gain+Glory',
+    name: 'CSS 3D Flipping Clock',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
-    tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
+      'Simple flipping clock made with HTML/CSS/JS, in this project I have used CSS 3D features to build a beautiful flipping clock.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
     images: [
-      './assets/background/desktop-project.png',
-      './assets/background/mobile-project.png',
+      './assets/background/3d-clock-desktop.png',
+      './assets/background/3d-clock-mobile.png',
     ],
-    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
-    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
-  },
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
-    tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    images: [
-      './assets/background/desktop-project.png',
-      './assets/background/mobile-project.png',
-    ],
-    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
-    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
-  },
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laborum sunt ipsa molestias odit, accusamus iste labore doloribus cum enim est ea perferendis, laudantium eum obcaecati natus consequatur nisi voluptatibus.',
-    tags: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    images: [
-      './assets/background/desktop-project.png',
-      './assets/background/mobile-project.png',
-    ],
-    sourceLink: 'https://github.com/BahirHakimy/My-Portfolio',
-    demoLink: 'https://bahirhakimy.github.io/My-Portfolio/',
+    sourceLink: 'https://github.com/BahirHakimy/3d-clock',
+    demoLink: 'https://bahirhakimy.github.io/3D-Clock/',
   },
 ];
 

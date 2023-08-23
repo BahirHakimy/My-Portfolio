@@ -37,6 +37,10 @@
   --bg-contact-form-desktop: url('./assets/background/contact-form-desktop.svg');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body.theme2 {
   --primary: #1e488f;
   --light: #e2edff;
@@ -87,8 +91,6 @@ body {
   height: 100vh;
   max-height: 100%;
   background: var(--glass);
-  mix-blend-mode: multiply;
-  backdrop-filter: blur(0.75rem);
   z-index: 100;
   overflow-y: scroll;
 }
@@ -411,6 +413,9 @@ a {
 }
 
 .image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 15.75rem;
   width: 100%;
   background-color: var(--smoke);
@@ -478,7 +483,7 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   padding: 0.5rem;
-  height: 50vh;
+  height: auto;
 }
 
 .about-me-card {
@@ -524,6 +529,10 @@ a {
   background-color: var(--white);
   border-radius: 0.75rem;
   margin: 0.25rem;
+}
+
+#contact-form-caption {
+  font-size: 1rem;
 }
 
 #contact-form {
@@ -700,7 +709,7 @@ footer {
 
   #contact-form-caption {
     font-size: 2rem;
-    width: 35%;
+    width: 40%;
   }
 
   .contact-input,

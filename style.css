@@ -17,15 +17,15 @@
   --gmail: #ea4335;
   --glass: #c1c7d0;
   --gray: #505f79;
-  --light: #c5e9da;
+  --primary: #1e488f;
+  --light: #e2edff;
   --light-gray: #dfe1e6;
   --light-green: #60c095;
   --linkedin: #0077b5;
   --natural: #3a4a42;
   --navy: #344563;
-  --primary: #28865f;
   --secondary: #172b4d;
-  --smoke: #ebf0ee;
+  --smoke: #ebeff4;
   --twitter: #1d9bf0;
   --whatsapp: #27cc37;
   --white: #fff;
@@ -35,6 +35,12 @@
   --bg-header-desktop: url('assets/background/header-desktop.svg');
   --bg-about-me-desktop: url('./assets/background/about-me-desktop.svg');
   --bg-contact-form-desktop: url('./assets/background/contact-form-desktop.svg');
+  --bg-header-mobile: url('./assets/background/headert2.svg');
+  --bg-about-me-mobile: url('./assets/background/about-met2.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-formt2.svg');
+  --bg-header-desktop: url('assets/background/header-desktopt2.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktopt2.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktopt2.svg');
 }
 
 * {
@@ -42,15 +48,15 @@
 }
 
 body.theme2 {
-  --primary: #1e488f;
-  --light: #e2edff;
-  --smoke: #ebeff4;
-  --bg-header-mobile: url('./assets/background/headert2.svg');
-  --bg-about-me-mobile: url('./assets/background/about-met2.svg');
-  --bg-contact-form-mobile: url('./assets/background/contact-formt2.svg');
-  --bg-header-desktop: url('assets/background/header-desktopt2.svg');
-  --bg-about-me-desktop: url('./assets/background/about-me-desktopt2.svg');
-  --bg-contact-form-desktop: url('./assets/background/contact-form-desktopt2.svg');
+  --primary: #28865f;
+  --light: #c5e9da;
+  --smoke: #ebf0ee;
+  --bg-header-mobile: url('./assets/background/header.svg');
+  --bg-about-me-mobile: url('./assets/background/about-me.svg');
+  --bg-contact-form-mobile: url('./assets/background/contact-form.svg');
+  --bg-header-desktop: url('assets/background/header-desktop.svg');
+  --bg-about-me-desktop: url('./assets/background/about-me-desktop.svg');
+  --bg-contact-form-desktop: url('./assets/background/contact-form-desktop.svg');
 }
 
 body.theme3 {
@@ -88,6 +94,7 @@ body {
 #modal-container {
   position: fixed;
   top: 0;
+  width: auto;
   height: 100vh;
   max-height: 100%;
   background: var(--glass);
@@ -248,7 +255,7 @@ header {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 3rem;
-  width: 94%;
+  width: 100%;
 }
 
 .mobile-header {

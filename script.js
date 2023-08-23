@@ -143,7 +143,7 @@ const projects = [
       'Simple flipping clock made with HTML/CSS/JS, in this project I have used CSS 3D features to build a beautiful flipping clock.',
     tags: ['HTML', 'CSS', 'JavaScript'],
     images: [
-      './assets/background/3d-clock-desktop.png',
+      './assets/images/3d-clock-desktop.png',
       './assets/background/3d-clock-mobile.png',
     ],
     sourceLink: 'https://github.com/BahirHakimy/3d-clock',

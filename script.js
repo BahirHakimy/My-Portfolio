@@ -21,6 +21,7 @@ const navItems = document.querySelectorAll('.nav-item');
 const logo = document.getElementById('logo');
 const modalContainer = document.getElementById('modal-container');
 const errorMessage = document.getElementById('error-message');
+const themePanel = document.getElementById('color-theme-panel');
 const nav = $('.desktop-nav');
 const form = $('form');
 
@@ -43,9 +44,13 @@ function showMobileNav() {
   navItems.forEach((item) => {
     item.classList.add('mobile-nav-item');
   });
+  themePanel.style.display = 'flex';
 }
 
 function hideMobileNav() {
+  if (document.body.clientWidth < 720) {
+    themePanel.style.display = 'none';
+  }
   header.classList.remove('mobile-header');
   hamburger.classList.remove('mobile-button');
   icon.className = 'fa-solid fa-bars';
@@ -66,9 +71,21 @@ hamburger.onclick = () => {
 
 const projects = [
   {
+    name: 'AutoRent Online Car Booking System',
+    description:
+      'I designed and developed an all-inclusive online car booking system using Django Rest Framework and React.js. This platform allows users to effortlessly rent cars, selecting pickup and drop-off points with integrated map functionalities. The system also features seamless Stripe payment integration for secure transactions. Complemented by an intuitive admin dashboard, this project exemplifies the synergy of technology and design for an efficient and visually appealing web application.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    images: [
+      './assets/images/autorent-desktop.png',
+      './assets/images/autorent-mobile.png',
+    ],
+    sourceLink: 'https://github.com/BahirHakimy/autorent',
+    demoLink: 'https://autorent-rentals.onrender.com/',
+  },
+  {
     name: 'Rent-a-car (Car reservations)',
     description:
-      "A beautifull web app created using Ruby on Rails, React js, TailwindCSS and PostgreSQL where users can rent cars. It has a beautifull and responsive UI and also ability to add new cars or remove existent one's",
+      "A beautiful web app created using Ruby on Rails, React js, TailwindCSS and PostgreSQL where users can rent cars. It has a beautiful and responsive UI and also ability to add new cars or remove existent one's",
     tags: [
       'Ruby on rails',
       'React js',
@@ -86,7 +103,7 @@ const projects = [
   {
     name: 'The Sky (Weather App)',
     description:
-      'A beautifully made weather app that shows the weather condition based on the users location, it uses Open Weather api to fetch weather data.',
+      'A beautifuly made weather app that shows the weather condition based on the users location, it uses Open Weather api to fetch weather data.',
     tags: ['React js', 'TailwindCSS', 'Redux js', 'OpenWeather API'],
     images: [
       './assets/images/the-sky-desktop.png',
@@ -137,18 +154,6 @@ const projects = [
     sourceLink: 'https://github.com/BahirHakimy/todo-list',
     demoLink: 'https://bahirhakimy.github.io/ToDo-List/',
   },
-  {
-    name: 'CSS 3D Flipping Clock',
-    description:
-      'Simple flipping clock made with HTML/CSS/JS, in this project I have used CSS 3D features to build a beautiful flipping clock.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    images: [
-      './assets/images/3d-clock-desktop.png',
-      './assets/background/3d-clock-mobile.png',
-    ],
-    sourceLink: 'https://github.com/BahirHakimy/3d-clock',
-    demoLink: 'https://bahirhakimy.github.io/3D-Clock/',
-  },
 ];
 
 function createModel(project) {
@@ -178,10 +183,10 @@ function createModel(project) {
      ${project.description}
     </p>
     <div id='modal-buttons-container'>
-      <a href='${project.demoLink}' class='modal-button'>
+      <a target='_blank' href='${project.demoLink}' class='modal-button'>
         See Live <img src='./assets/icons/see-live.svg' alt='icon' />
       </a>
-      <a href='${project.sourceLink}' class='modal-button'>
+      <a target='_blank' href='${project.sourceLink}' class='modal-button'>
         See Source <img src='./assets/icons/githubWhite.svg' alt='icon' />
       </a>
     </div>`;
@@ -191,7 +196,7 @@ function createModel(project) {
 function hideModel() {
   modalContainer.style.display = 'none';
   modalContainer.innerHTML = '';
-  $('#container').style.overflow = 'auto';
+  $('#container').style.overflow = 'visible';
 }
 
 function showModel(index = 0) {
@@ -202,9 +207,15 @@ function showModel(index = 0) {
   $('#container').style.overflow = 'hidden';
 }
 
-document.querySelectorAll('.project-btn').forEach((btn, index) => {
+document.querySelectorAll('.project-card').forEach((btn, index) => {
   btn.onclick = () => {
     showModel(index);
+  };
+});
+
+document.querySelectorAll('.modal-button').forEach((btn) => {
+  btn.onclick = (ev) => {
+    ev.stopPropagation();
   };
 });
 
